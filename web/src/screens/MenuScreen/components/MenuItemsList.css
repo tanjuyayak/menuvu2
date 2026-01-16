@@ -1,0 +1,18 @@
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-items-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .menu-items-list {
+    gap: 24px;
+  }
+}
