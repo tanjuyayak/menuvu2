@@ -179,7 +179,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f8f9fa;
+  background: #ffffff;
   border-radius: 4px;
   padding: 0;
   outline: none;
@@ -213,7 +213,7 @@
   height: 44px;
   border-radius: 4px;
   border: none;
-  background: #ffffff;
+  background: #f8f9fa;
   color: #1a1a1a;
   font-size: 24px;
   font-weight: 500;
@@ -224,6 +224,16 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+}
+
+.quantity-button.remove {
+  background: #f8f9fa;
+  color: #1a1a1a;
+}
+
+.quantity-button.remove:active {
+  background: #f8f9fa;
+  color: #1a1a1a;
 }
 
 .quantity-button:active {
@@ -242,7 +252,7 @@
 .quantity-display {
   min-width: 24px;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #1a1a1a;
 }
@@ -296,6 +306,10 @@
   
   .quantity-controls {
     height: 48px;
+  }
+  
+  .quantity-display {
+    font-size: 20px;
   }
 
   .add-button {
