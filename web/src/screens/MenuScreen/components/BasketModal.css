@@ -165,7 +165,7 @@
 }
 
 .basket-item-name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #1a1a1a;
 }
@@ -174,7 +174,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
   flex-wrap: wrap;
 }
@@ -393,11 +393,11 @@
   }
 
   .basket-item-name {
-    font-size: 17px;
+    font-size: 19px;
   }
   
   .basket-item-price-info {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .basket-quantity-button {
