@@ -203,6 +203,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-right: -3px;
 }
 
 .basket-item-quantity-controls {
@@ -409,6 +410,9 @@
     font-size: 20px;
   }
 
+  .basket-item-controls {
+    margin-right: 8px;
+  }
 
   .basket-total-label {
     font-size: 17px;
