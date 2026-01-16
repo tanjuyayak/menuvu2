@@ -1,0 +1,489 @@
+{
+    "defaultLanguage": "en",
+    "languages": [
+        {
+            "id": "en",
+            "name": "English"
+        },
+        {
+            "id": "nl",
+            "name": "Nederlands"
+        }
+    ],
+    "categories": [
+        {
+            "id": "cat1",
+            "name": {
+                "en": "Breakfast",
+                "nl": "Ontbijt"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "Avocado Toast",
+                        "nl": "Avocado Toast"
+                    },
+                    "description": {
+                        "en": "Sourdough bread, avocado, olive oil",
+                        "nl": "Desembrood, avocado, olijfolie"
+                    },
+                    "price": 850,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian", "vegan"],
+                    "allergens": ["gluten"]
+                },
+                {
+                    "name": {
+                        "en": "Scrambled Eggs",
+                        "nl": "Roerei"
+                    },
+                    "description": {
+                        "en": "Eggs, butter, toast",
+                        "nl": "Eieren, boter, toast"
+                    },
+                    "price": 750,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["eggs", "gluten", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Pancakes",
+                        "nl": "Pannenkoeken"
+                    },
+                    "description": {
+                        "en": "Served with syrup",
+                        "nl": "Geserveerd met siroop"
+                    },
+                    "price": 800,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "eggs", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Granola Bowl",
+                        "nl": "Granola Kom"
+                    },
+                    "description": {
+                        "en": "Granola, yogurt, fresh fruit",
+                        "nl": "Granola, yoghurt, vers fruit"
+                    },
+                    "price": 700,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["nuts", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Vegan Breakfast Bowl",
+                        "nl": "Vegan Ontbijtkom"
+                    },
+                    "description": {
+                        "en": "Quinoa, fruit, seeds",
+                        "nl": "Quinoa, fruit, zaden"
+                    },
+                    "price": 780,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["nuts"]
+                }
+            ]
+        },
+        {
+            "id": "cat2",
+            "name": {
+                "en": "Lunch",
+                "nl": "Lunch"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "Chicken Caesar Salad",
+                        "nl": "Caesar Salade met Kip"
+                    },
+                    "description": {
+                        "en": "Chicken, romaine, parmesan",
+                        "nl": "Kip, romaine, parmezaan"
+                    },
+                    "price": 1250,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["helal"],
+                    "allergens": ["gluten", "lactose", "eggs"]
+                },
+                {
+                    "name": {
+                        "en": "Vegan Buddha Bowl",
+                        "nl": "Vegan Buddha Bowl"
+                    },
+                    "description": {
+                        "en": "Chickpeas, vegetables, tahini",
+                        "nl": "Kikkererwten, groenten, tahini"
+                    },
+                    "price": 1150,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["sesame"]
+                },
+                {
+                    "name": {
+                        "en": "Grilled Cheese Sandwich",
+                        "nl": "Tosti Kaas"
+                    },
+                    "description": {
+                        "en": "Cheddar, sourdough bread",
+                        "nl": "Cheddar, desembrood"
+                    },
+                    "price": 650,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Falafel Wrap",
+                        "nl": "Falafel Wrap"
+                    },
+                    "description": {
+                        "en": "Falafel, salad, yogurt sauce",
+                        "nl": "Falafel, salade, yoghurtsaus"
+                    },
+                    "price": 900,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Beef Burger",
+                        "nl": "Rundvlees Burger"
+                    },
+                    "description": {
+                        "en": "Beef patty, lettuce, sauce",
+                        "nl": "Rundvlees, sla, saus"
+                    },
+                    "price": 1350,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["helal"],
+                    "allergens": ["gluten"]
+                }
+            ]
+        },
+        {
+            "id": "cat3",
+            "name": {
+                "en": "Coffee",
+                "nl": "Koffie"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "Espresso",
+                        "nl": "Espresso"
+                    },
+                    "description": {
+                        "en": "Single shot espresso",
+                        "nl": "Enkele espresso"
+                    },
+                    "price": 300,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Cappuccino",
+                        "nl": "Cappuccino"
+                    },
+                    "description": {
+                        "en": "Espresso with milk foam",
+                        "nl": "Espresso met melkschuim"
+                    },
+                    "price": 380,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Latte",
+                        "nl": "Latte"
+                    },
+                    "description": {
+                        "en": "Milk coffee",
+                        "nl": "Koffie met melk"
+                    },
+                    "price": 420,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Oat Milk Latte",
+                        "nl": "Havermelk Latte"
+                    },
+                    "description": {
+                        "en": "Latte with oat milk",
+                        "nl": "Latte met havermelk"
+                    },
+                    "price": 450,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["gluten"]
+                },
+                {
+                    "name": {
+                        "en": "Iced Coffee",
+                        "nl": "IJskoffie"
+                    },
+                    "description": {
+                        "en": "Cold coffee with ice",
+                        "nl": "Koude koffie met ijs"
+                    },
+                    "price": 480,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["lactose"]
+                }
+            ]
+        },
+        {
+            "id": "cat4",
+            "name": {
+                "en": "Drinks",
+                "nl": "Dranken"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "Fresh Orange Juice",
+                        "nl": "Verse Sinaasappelsap"
+                    },
+                    "description": {
+                        "en": "Freshly squeezed",
+                        "nl": "Vers geperst"
+                    },
+                    "price": 450,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Sparkling Water",
+                        "nl": "Bruisend Water"
+                    },
+                    "description": {
+                        "en": "Chilled sparkling water",
+                        "nl": "Gekoeld bruisend water"
+                    },
+                    "price": 300,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Cola",
+                        "nl": "Cola"
+                    },
+                    "description": {
+                        "en": "Classic cola",
+                        "nl": "Klassieke cola"
+                    },
+                    "price": 320,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Mint Tea",
+                        "nl": "Muntthee"
+                    },
+                    "description": {
+                        "en": "Fresh mint leaves",
+                        "nl": "Verse munt"
+                    },
+                    "price": 350,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Iced Lemonade",
+                        "nl": "IJslimonade"
+                    },
+                    "description": {
+                        "en": "Lemon, sugar, ice",
+                        "nl": "Citroen, suiker, ijs"
+                    },
+                    "price": 380,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                }
+            ]
+        },
+        {
+            "id": "cat5",
+            "name": {
+                "en": "Desserts",
+                "nl": "Desserts"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "Chocolate Brownie",
+                        "nl": "Chocolade Brownie"
+                    },
+                    "description": {
+                        "en": "Rich chocolate brownie",
+                        "nl": "Rijke chocolade brownie"
+                    },
+                    "price": 550,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "eggs", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Cheesecake",
+                        "nl": "Cheesecake"
+                    },
+                    "description": {
+                        "en": "Cream cheese, biscuit base",
+                        "nl": "Roomkaas, koekjesbodem"
+                    },
+                    "price": 600,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "lactose", "eggs"]
+                },
+                {
+                    "name": {
+                        "en": "Vegan Carrot Cake",
+                        "nl": "Vegan Worteltaart"
+                    },
+                    "description": {
+                        "en": "Carrot, nuts, spices",
+                        "nl": "Wortel, noten, kruiden"
+                    },
+                    "price": 620,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["nuts", "gluten"]
+                },
+                {
+                    "name": {
+                        "en": "Ice Cream",
+                        "nl": "IJs"
+                    },
+                    "description": {
+                        "en": "Vanilla ice cream",
+                        "nl": "Vanille ijs"
+                    },
+                    "price": 480,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Fruit Salad",
+                        "nl": "Fruitsalade"
+                    },
+                    "description": {
+                        "en": "Seasonal fresh fruits",
+                        "nl": "Seizoensfruit"
+                    },
+                    "price": 500,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                }
+            ]
+        },
+        {
+            "id": "cat6",
+            "name": {
+                "en": "Snacks",
+                "nl": "Snacks"
+            },
+            "items": [
+                {
+                    "name": {
+                        "en": "French Fries",
+                        "nl": "Friet"
+                    },
+                    "description": {
+                        "en": "Crispy fries",
+                        "nl": "Krokante friet"
+                    },
+                    "price": 400,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": []
+                },
+                {
+                    "name": {
+                        "en": "Chicken Nuggets",
+                        "nl": "Kipnuggets"
+                    },
+                    "description": {
+                        "en": "Breaded chicken pieces",
+                        "nl": "Gepaneerde kipstukjes"
+                    },
+                    "price": 600,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["helal"],
+                    "allergens": ["gluten"]
+                },
+                {
+                    "name": {
+                        "en": "Falafel Bites",
+                        "nl": "Falafel Hapjes"
+                    },
+                    "description": {
+                        "en": "Fried chickpea balls",
+                        "nl": "Gefrituurde kikkererwtenballetjes"
+                    },
+                    "price": 550,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["gluten"]
+                },
+                {
+                    "name": {
+                        "en": "Cheese Sticks",
+                        "nl": "Kaassticks"
+                    },
+                    "description": {
+                        "en": "Fried cheese sticks",
+                        "nl": "Gefrituurde kaassticks"
+                    },
+                    "price": 580,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegetarian"],
+                    "allergens": ["gluten", "lactose"]
+                },
+                {
+                    "name": {
+                        "en": "Mixed Nuts",
+                        "nl": "Gemengde Noten"
+                    },
+                    "description": {
+                        "en": "Roasted mixed nuts",
+                        "nl": "Geroosterde gemengde noten"
+                    },
+                    "price": 450,
+                    "image": "https://via.placeholder.com/150",
+                    "indicators": ["vegan"],
+                    "allergens": ["nuts"]
+                }
+            ]
+        }
+    ]
+}
