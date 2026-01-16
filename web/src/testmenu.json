@@ -19,13 +19,14 @@
             },
             "items": [
                 {
+                    "id": "cat1_item1",
                     "name": {
                         "en": "Avocado Toast",
                         "nl": "Avocado Toast"
                     },
                     "description": {
-                        "en": "Sourdough bread, avocado, olive oil",
-                        "nl": "Desembrood, avocado, olijfolie"
+                        "en": "Toasted sourdough topped with ripe avocado, olive oil, and a pinch of sea salt.",
+                        "nl": "Geroosterd desembrood met rijpe avocado, olijfolie en een snuf zeezout."
                     },
                     "price": 850,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -33,13 +34,14 @@
                     "allergens": ["gluten"]
                 },
                 {
+                    "id": "cat1_item2",
                     "name": {
                         "en": "Scrambled Eggs",
                         "nl": "Roerei"
                     },
                     "description": {
-                        "en": "Eggs, butter, toast",
-                        "nl": "Eieren, boter, toast"
+                        "en": "Creamy scrambled eggs cooked in butter, served with warm toast on the side.",
+                        "nl": "Romig roerei bereid in boter, geserveerd met warm toast erbij."
                     },
                     "price": 750,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -47,13 +49,14 @@
                     "allergens": ["eggs", "gluten", "lactose"]
                 },
                 {
+                    "id": "cat1_item3",
                     "name": {
                         "en": "Pancakes",
                         "nl": "Pannenkoeken"
                     },
                     "description": {
-                        "en": "Served with syrup",
-                        "nl": "Geserveerd met siroop"
+                        "en": "Fluffy pancakes served warm with classic syrup and a light dusting of sugar.",
+                        "nl": "Luchtige pannenkoeken, warm geserveerd met klassieke siroop en een beetje suiker."
                     },
                     "price": 800,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -61,13 +64,14 @@
                     "allergens": ["gluten", "eggs", "lactose"]
                 },
                 {
+                    "id": "cat1_item4",
                     "name": {
                         "en": "Granola Bowl",
                         "nl": "Granola Kom"
                     },
                     "description": {
-                        "en": "Granola, yogurt, fresh fruit",
-                        "nl": "Granola, yoghurt, vers fruit"
+                        "en": "Crunchy granola with yogurt and seasonal fresh fruit for a light, filling start.",
+                        "nl": "Krokante granola met yoghurt en seizoensfruit voor een lichte, vullende start."
                     },
                     "price": 700,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -75,13 +79,14 @@
                     "allergens": ["nuts", "lactose"]
                 },
                 {
+                    "id": "cat1_item5",
                     "name": {
                         "en": "Vegan Breakfast Bowl",
                         "nl": "Vegan Ontbijtkom"
                     },
                     "description": {
-                        "en": "Quinoa, fruit, seeds",
-                        "nl": "Quinoa, fruit, zaden"
+                        "en": "Quinoa bowl with fresh fruit and mixed seeds, finished with a touch of cinnamon.",
+                        "nl": "Quinoa-kom met vers fruit en gemengde zaden, afgewerkt met een beetje kaneel."
                     },
                     "price": 780,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -98,13 +103,14 @@
             },
             "items": [
                 {
+                    "id": "cat2_item1",
                     "name": {
                         "en": "Chicken Caesar Salad",
                         "nl": "Caesar Salade met Kip"
                     },
                     "description": {
-                        "en": "Chicken, romaine, parmesan",
-                        "nl": "Kip, romaine, parmezaan"
+                        "en": "Romaine lettuce with grilled chicken, parmesan, and Caesar dressing, topped with crunchy croutons.",
+                        "nl": "Romaine sla met gegrilde kip, parmezaan en Caesar dressing, met knapperige croutons."
                     },
                     "price": 1250,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -112,13 +118,14 @@
                     "allergens": ["gluten", "lactose", "eggs"]
                 },
                 {
+                    "id": "cat2_item2",
                     "name": {
                         "en": "Vegan Buddha Bowl",
                         "nl": "Vegan Buddha Bowl"
                     },
                     "description": {
-                        "en": "Chickpeas, vegetables, tahini",
-                        "nl": "Kikkererwten, groenten, tahini"
+                        "en": "Chickpeas and mixed vegetables with tahini dressing, served over a hearty grain base.",
+                        "nl": "Kikkererwten en gemengde groenten met tahinidressing, geserveerd op een stevige graanbasis."
                     },
                     "price": 1150,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -126,13 +133,14 @@
                     "allergens": ["sesame"]
                 },
                 {
+                    "id": "cat2_item3",
                     "name": {
                         "en": "Grilled Cheese Sandwich",
                         "nl": "Tosti Kaas"
                     },
                     "description": {
-                        "en": "Cheddar, sourdough bread",
-                        "nl": "Cheddar, desembrood"
+                        "en": "Golden toasted sourdough filled with melted cheddar, served hot and crispy.",
+                        "nl": "Goudbruin geroosterd desembrood met gesmolten cheddar, warm en krokant geserveerd."
                     },
                     "price": 650,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -140,13 +148,14 @@
                     "allergens": ["gluten", "lactose"]
                 },
                 {
+                    "id": "cat2_item4",
                     "name": {
                         "en": "Falafel Wrap",
                         "nl": "Falafel Wrap"
                     },
                     "description": {
-                        "en": "Falafel, salad, yogurt sauce",
-                        "nl": "Falafel, salade, yoghurtsaus"
+                        "en": "Falafel with fresh salad and a creamy yogurt sauce, wrapped in a soft flatbread.",
+                        "nl": "Falafel met verse salade en romige yoghurtsaus, gerold in een zacht flatbread."
                     },
                     "price": 900,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -154,13 +163,14 @@
                     "allergens": ["gluten", "lactose"]
                 },
                 {
+                    "id": "cat2_item5",
                     "name": {
                         "en": "Beef Burger",
                         "nl": "Rundvlees Burger"
                     },
                     "description": {
-                        "en": "Beef patty, lettuce, sauce",
-                        "nl": "Rundvlees, sla, saus"
+                        "en": "Juicy beef patty with lettuce and house sauce, served in a classic bun.",
+                        "nl": "Sappige rundvleespattie met sla en huisgemaakte saus, geserveerd op een klassiek broodje."
                     },
                     "price": 1350,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -177,13 +187,14 @@
             },
             "items": [
                 {
+                    "id": "cat3_item1",
                     "name": {
                         "en": "Espresso",
                         "nl": "Espresso"
                     },
                     "description": {
-                        "en": "Single shot espresso",
-                        "nl": "Enkele espresso"
+                        "en": "Single shot espresso with a rich crema and bold, smooth finish.",
+                        "nl": "Enkele espresso met rijke crema en een krachtige, zachte afdronk."
                     },
                     "price": 300,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -191,13 +202,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat3_item2",
                     "name": {
                         "en": "Cappuccino",
                         "nl": "Cappuccino"
                     },
                     "description": {
-                        "en": "Espresso with milk foam",
-                        "nl": "Espresso met melkschuim"
+                        "en": "Espresso topped with silky milk foam for a balanced, creamy coffee.",
+                        "nl": "Espresso met zijdezacht melkschuim voor een gebalanceerde, romige koffie."
                     },
                     "price": 380,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -205,13 +217,14 @@
                     "allergens": ["lactose"]
                 },
                 {
+                    "id": "cat3_item3",
                     "name": {
                         "en": "Latte",
                         "nl": "Latte"
                     },
                     "description": {
-                        "en": "Milk coffee",
-                        "nl": "Koffie met melk"
+                        "en": "Smooth espresso with steamed milk for a mild, comforting coffee.",
+                        "nl": "Zachte espresso met gestoomde melk voor een milde, comfortabele koffie."
                     },
                     "price": 420,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -219,13 +232,14 @@
                     "allergens": ["lactose"]
                 },
                 {
+                    "id": "cat3_item4",
                     "name": {
                         "en": "Oat Milk Latte",
                         "nl": "Havermelk Latte"
                     },
                     "description": {
-                        "en": "Latte with oat milk",
-                        "nl": "Latte met havermelk"
+                        "en": "Latte made with oat milk for a light, naturally sweet taste.",
+                        "nl": "Latte met havermelk voor een lichte, natuurlijk zoete smaak."
                     },
                     "price": 450,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -233,13 +247,14 @@
                     "allergens": ["gluten"]
                 },
                 {
+                    "id": "cat3_item5",
                     "name": {
                         "en": "Iced Coffee",
                         "nl": "IJskoffie"
                     },
                     "description": {
-                        "en": "Cold coffee with ice",
-                        "nl": "Koude koffie met ijs"
+                        "en": "Chilled coffee served over ice for a refreshing, smooth drink.",
+                        "nl": "Gekoelde koffie met ijs voor een verfrissende, zachte drink."
                     },
                     "price": 480,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -256,13 +271,14 @@
             },
             "items": [
                 {
+                    "id": "cat4_item1",
                     "name": {
                         "en": "Fresh Orange Juice",
                         "nl": "Verse Sinaasappelsap"
                     },
                     "description": {
-                        "en": "Freshly squeezed",
-                        "nl": "Vers geperst"
+                        "en": "Freshly squeezed orange juice, served chilled.",
+                        "nl": "Vers geperst sinaasappelsap, gekoeld geserveerd."
                     },
                     "price": 450,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -270,13 +286,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat4_item2",
                     "name": {
                         "en": "Sparkling Water",
                         "nl": "Bruisend Water"
                     },
                     "description": {
-                        "en": "Chilled sparkling water",
-                        "nl": "Gekoeld bruisend water"
+                        "en": "Chilled sparkling water with a clean, crisp taste.",
+                        "nl": "Gekoeld bruisend water met een frisse, pure smaak."
                     },
                     "price": 300,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -284,13 +301,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat4_item3",
                     "name": {
                         "en": "Cola",
                         "nl": "Cola"
                     },
                     "description": {
-                        "en": "Classic cola",
-                        "nl": "Klassieke cola"
+                        "en": "Classic cola served cold with ice, if you like.",
+                        "nl": "Klassieke cola, koud geserveerd met ijs als je wilt."
                     },
                     "price": 320,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -298,13 +316,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat4_item4",
                     "name": {
                         "en": "Mint Tea",
                         "nl": "Muntthee"
                     },
                     "description": {
-                        "en": "Fresh mint leaves",
-                        "nl": "Verse munt"
+                        "en": "Hot tea brewed with fresh mint leaves and a light aroma.",
+                        "nl": "Warme thee gezet met verse muntblaadjes en een lichte geur."
                     },
                     "price": 350,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -312,13 +331,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat4_item5",
                     "name": {
                         "en": "Iced Lemonade",
                         "nl": "IJslimonade"
                     },
                     "description": {
-                        "en": "Lemon, sugar, ice",
-                        "nl": "Citroen, suiker, ijs"
+                        "en": "Refreshing lemonade with lemon, sugar, and ice.",
+                        "nl": "Verfrissende limonade met citroen, suiker en ijs."
                     },
                     "price": 380,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -335,13 +355,14 @@
             },
             "items": [
                 {
+                    "id": "cat5_item1",
                     "name": {
                         "en": "Chocolate Brownie",
                         "nl": "Chocolade Brownie"
                     },
                     "description": {
-                        "en": "Rich chocolate brownie",
-                        "nl": "Rijke chocolade brownie"
+                        "en": "Rich chocolate brownie with a soft center and a slightly crisp top.",
+                        "nl": "Rijke chocolade brownie met een zachte kern en een licht krokante bovenkant."
                     },
                     "price": 550,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -349,13 +370,14 @@
                     "allergens": ["gluten", "eggs", "lactose"]
                 },
                 {
+                    "id": "cat5_item2",
                     "name": {
                         "en": "Cheesecake",
                         "nl": "Cheesecake"
                     },
                     "description": {
-                        "en": "Cream cheese, biscuit base",
-                        "nl": "Roomkaas, koekjesbodem"
+                        "en": "Creamy cheesecake with a biscuit base, served chilled.",
+                        "nl": "Romige cheesecake met een koekjesbodem, gekoeld geserveerd."
                     },
                     "price": 600,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -363,13 +385,14 @@
                     "allergens": ["gluten", "lactose", "eggs"]
                 },
                 {
+                    "id": "cat5_item3",
                     "name": {
                         "en": "Vegan Carrot Cake",
                         "nl": "Vegan Worteltaart"
                     },
                     "description": {
-                        "en": "Carrot, nuts, spices",
-                        "nl": "Wortel, noten, kruiden"
+                        "en": "Moist carrot cake with warm spices and crunchy nuts, made without dairy or eggs.",
+                        "nl": "Smeuïge worteltaart met warme kruiden en knapperige noten, zonder zuivel of ei."
                     },
                     "price": 620,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -377,13 +400,14 @@
                     "allergens": ["nuts", "gluten"]
                 },
                 {
+                    "id": "cat5_item4",
                     "name": {
                         "en": "Ice Cream",
                         "nl": "IJs"
                     },
                     "description": {
-                        "en": "Vanilla ice cream",
-                        "nl": "Vanille ijs"
+                        "en": "Classic vanilla ice cream, creamy and smooth.",
+                        "nl": "Klassiek vanille-ijs, romig en zacht."
                     },
                     "price": 480,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -391,13 +415,14 @@
                     "allergens": ["lactose"]
                 },
                 {
+                    "id": "cat5_item5",
                     "name": {
                         "en": "Fruit Salad",
                         "nl": "Fruitsalade"
                     },
                     "description": {
-                        "en": "Seasonal fresh fruits",
-                        "nl": "Seizoensfruit"
+                        "en": "Fresh seasonal fruits, lightly mixed and served chilled.",
+                        "nl": "Vers seizoensfruit, licht gemengd en gekoeld geserveerd."
                     },
                     "price": 500,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -414,13 +439,14 @@
             },
             "items": [
                 {
+                    "id": "cat6_item1",
                     "name": {
                         "en": "French Fries",
                         "nl": "Friet"
                     },
                     "description": {
-                        "en": "Crispy fries",
-                        "nl": "Krokante friet"
+                        "en": "Crispy golden fries, lightly salted and served hot.",
+                        "nl": "Krokante goudgele friet, licht gezouten en warm geserveerd."
                     },
                     "price": 400,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -428,13 +454,14 @@
                     "allergens": []
                 },
                 {
+                    "id": "cat6_item2",
                     "name": {
                         "en": "Chicken Nuggets",
                         "nl": "Kipnuggets"
                     },
                     "description": {
-                        "en": "Breaded chicken pieces",
-                        "nl": "Gepaneerde kipstukjes"
+                        "en": "Crispy breaded chicken nuggets, served warm and ready to dip.",
+                        "nl": "Krokant gepaneerde kipnuggets, warm geserveerd en klaar om te dippen."
                     },
                     "price": 600,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -442,13 +469,14 @@
                     "allergens": ["gluten"]
                 },
                 {
+                    "id": "cat6_item3",
                     "name": {
                         "en": "Falafel Bites",
                         "nl": "Falafel Hapjes"
                     },
                     "description": {
-                        "en": "Fried chickpea balls",
-                        "nl": "Gefrituurde kikkererwtenballetjes"
+                        "en": "Fried chickpea bites with a crunchy outside and soft, spiced center.",
+                        "nl": "Gefrituurde falafelhapjes met een krokante buitenkant en zachte, kruidige kern."
                     },
                     "price": 550,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -456,13 +484,14 @@
                     "allergens": ["gluten"]
                 },
                 {
+                    "id": "cat6_item4",
                     "name": {
                         "en": "Cheese Sticks",
                         "nl": "Kaassticks"
                     },
                     "description": {
-                        "en": "Fried cheese sticks",
-                        "nl": "Gefrituurde kaassticks"
+                        "en": "Fried cheese sticks with a melty center and crispy coating.",
+                        "nl": "Gefrituurde kaassticks met een smeuïge kern en krokant jasje."
                     },
                     "price": 580,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
@@ -470,13 +499,14 @@
                     "allergens": ["gluten", "lactose"]
                 },
                 {
+                    "id": "cat6_item5",
                     "name": {
                         "en": "Mixed Nuts",
                         "nl": "Gemengde Noten"
                     },
                     "description": {
-                        "en": "Roasted mixed nuts",
-                        "nl": "Geroosterde gemengde noten"
+                        "en": "Roasted mixed nuts, lightly salted for a crunchy snack.",
+                        "nl": "Geroosterde gemengde noten, licht gezouten voor een knapperige snack."
                     },
                     "price": 450,
                     "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636",
