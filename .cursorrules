@@ -1,0 +1,300 @@
+# .cursorrules — Simple React + TypeScript (no over-engineering)
+
+## Goals
+- Write **simple, clean, understandable** React + TypeScript.
+- Prefer **clarity over cleverness**.
+- Avoid unnecessary abstractions, patterns, frameworks, and “architecture astronaut” code.
+- Keep folders **feature/screen-oriented**: screens and their components live together.
+
+---
+
+## Tech assumptions
+- React + TypeScript
+- Fetch-based API calls (no heavy client unless requested)
+- React Router only if needed
+- No Redux/MobX unless explicitly requested (use local state + props; optionally React Context for truly global concerns)
+- **Simple localization is required** (see Localization rules)
+
+---
+
+## Code style principles (MUST)
+- Use **functional components** only.
+- Keep components **small** and **single-purpose**.
+- Use **explicit names**. Avoid generic names like `data`, `item`, `handleThing` unless obvious.
+- Prefer **composition** over inheritance.
+- Prefer **simple props** over global state.
+- Prefer **plain objects + functions** over classes (unless asked).
+- Avoid:
+  - “clean architecture” layers (domain/usecase/repository) unless app is huge and user asked
+  - excessive indirection (factories, dependency injection, service locators)
+  - overuse of generics
+  - custom hooks that just wrap trivial logic
+  - one-file “utils” dumping grounds
+
+---
+
+## Folder structure (ENFORCE)
+Use screen/feature folders. Co-locate UI components with the screen they serve.
+
+Example:
+src/
+  app/
+    App.tsx
+    router.tsx (only if routing exists)
+  i18n/
+    index.ts
+    en.ts
+  screens/
+    Home/
+      HomeScreen.tsx
+      components/
+        HomeHeader.tsx
+  components/
+    Button/
+      Button.tsx
+      Button.css
+      index.ts
+  services/
+    httpService.ts
+    apiErrors.ts
+  types/
+    api.ts
+  utils/
+    formatDate.ts
+
+Rules:
+- **Screen-specific components** go in `src/screens/<Screen>/components`.
+- **Shared reusable components** go in `src/components`.
+- **Services** go in `src/services`.
+- Keep `utils/` small and purposeful; split by file, not giant utils barrel.
+
+---
+
+## Imports & exports
+- Prefer **named exports** for most things.
+- Use default export for **React components** only if consistent within a folder.
+- Avoid deep barrels; an `index.ts` is ok per component folder, but do not create large export trees.
+
+---
+
+## React conventions
+- Keep state close to where it’s used.
+- Prefer `useState` and `useEffect` for basics.
+- Use `useMemo` / `useCallback` **only when** there is a clear performance or referential-equality need.
+- Avoid “smart vs dumb” component over-structure; just keep components readable.
+- No unnecessary context providers.
+
+---
+
+## TypeScript rules (MUST)
+- **No `any`** unless absolutely unavoidable; prefer `unknown` + narrowing.
+- Prefer **type aliases** for API response shapes and props.
+- Type props explicitly:
+  - `type Props = { ... }`
+- Avoid overly complex generics and conditional types.
+- Use `React.FC` only if the codebase already uses it; otherwise prefer plain function typing.
+
+---
+
+## Localization rules (MUST)
+- Use a **simple localization setup** with a `t(key: string): string` function.
+- **All user-visible texts and error messages must be localized**:
+  - button labels, headings, empty states, errors, toasts, etc.
+- If code removes a UI text or error message, **also remove its localization key** from localization files.
+- Localization keys should be stable and readable, e.g.:
+  - `home.title`
+  - `common.loading`
+  - `api.exceptionCodes.general`
+  - `api.exceptionCodes.NETWORK_ERROR`
+  - `api.exceptionCodes.SOME_BACKEND_CODE`
+
+---
+
+## HTTP service (MUST be simple, with interceptors behavior)
+- Use a single `httpService.ts` with:
+  - `get<T>(url: string, options?)`
+  - `post<T>(url: string, body?: unknown, options?)`
+  - optionally `put<T>`, `del<T>`
+- Keep it minimal but MUST include:
+  1) **Request “interceptor” behavior**: automatically include auth token from `localStorage` if available  
+     - read from `localStorage.getItem('authToken')` (or a single constant key)
+     - add header: `Authorization: Bearer <token>`
+  2) **Response “interceptor” behavior for errors**:
+     - error responses include `exceptionCode`
+     - throw `ApiError(exceptionCode)` when present
+     - if no response (network error), throw `ApiError('NETWORK_ERROR')`
+     - otherwise throw a generic `ApiError('GENERAL_ERROR')` (still localized)
+
+NO:
+- repositories
+- api client generators
+- heavy interceptor frameworks
+- DTO mappers unless requested
+
+### ApiError requirements
+- Have `ApiError` class in `src/services/apiErrors.ts`:
+  - `message` should be the **exceptionCode** string (e.g. `USER_NOT_FOUND`)
+  - keep it dead simple; no extra fields unless needed
+
+---
+
+## Error handling & UX
+- Show basic loading and error states in screens.
+- Keep it straightforward:
+  - `isLoading`, `error`, `data`
+- Errors from API must be handled using the standard pattern below.
+
+---
+
+## Testing
+- **No UI testing needed.** Do not add React Testing Library/Cypress/Playwright configs unless explicitly asked.
+
+---
+
+## When generating code (Cursor behavior)
+1. **Start with the simplest working version**.
+2. Only introduce a new file/folder if it clearly improves readability.
+3. Keep functions short; prefer directness.
+4. Provide code that is easy to follow for a junior developer.
+5. Avoid “future-proofing” abstractions.
+6. If you need reuse, extract only after duplication is real.
+7. Every time you add/remove user-visible text, keep localization files in sync.
+
+---
+
+## Examples (React + TS) — MUST follow these patterns
+
+### 1) Minimal i18n setup example
+src/i18n/en.ts
+- Keep a plain object of strings.
+- Include common default error keys.
+
+Example keys to include:
+- `api.exceptionCodes.general`
+- `api.exceptionCodes.NETWORK_ERROR`
+- `api.exceptionCodes.GENERAL_ERROR`
+
+### 2) httpService request “interceptor” (React-friendly example)
+- Before every request, read token from localStorage and add Authorization header if present.
+
+Pseudo-behavior example:
+- `const token = localStorage.getItem('authToken')`
+- `headers.Authorization = \`Bearer ${token}\``
+
+### 3) httpService response “interceptor” for errors (React-friendly example)
+- If response JSON has `{ exceptionCode: string }`, throw `new ApiError(exceptionCode)`
+- If there is no response (network), throw `new ApiError('NETWORK_ERROR')`
+- Otherwise throw `new ApiError('GENERAL_ERROR')`
+
+### 4) Screen usage pattern (always handle ApiError like this)
+```ts
+try {
+  // http call
+} catch (error) {
+  if (error instanceof ApiError) {
+    // error.message is the exceptionCode
+    // the UI should localize it if possible
+    setError(t(`api.exceptionCodes.${error.message}`) || t('api.exceptionCodes.general'));
+  } else {
+    setError(t('api.exceptionCodes.general'));
+  }
+}
+
+---
+
+## Mobile-first & cross-platform UI rules (MUST)
+- Always **think mobile-first**, even when building for web.
+- UI must be **fully usable on small screens** before enhancing for larger screens.
+- Layouts must work for:
+  - mobile (narrow width, touch)
+  - tablet
+  - desktop
+
+### Layout & styling rules
+- Prefer **flexbox** and **simple column layouts**.
+- Avoid fixed widths; use:
+  - `max-width`
+  - percentages
+  - responsive units
+- Use adequate spacing and font sizes for **touch interaction**.
+- Buttons and clickable elements must be:
+  - large enough for fingers
+  - clearly distinguishable
+
+### Components
+- Components should adapt naturally to screen size without special logic.
+- Avoid desktop-only UI assumptions (hover-only actions, tiny click targets).
+- Prefer vertical stacking on mobile; enhance to horizontal layouts on larger screens.
+
+### CSS & responsiveness
+- Use **minimal responsive breakpoints** only when necessary.
+- Avoid complex responsive systems or abstractions.
+- Prefer simple media queries or container-based layouts.
+
+### Accessibility & usability
+- Text must remain readable on small screens.
+- Forms must be usable with:
+  - virtual keyboards
+  - touch-only interaction
+
+### Decision rule
+If a UI choice works well on mobile, it will almost always work on desktop.
+If it only works on desktop, it is **not acceptable**.
+
+---
+
+## Backend Style (ASP.NET Core API)
+
+### Controllers
+- Use **primary constructor** for dependency injection:
+  ```csharp
+  public class MyController(
+      AppDbContext appDbContext,
+      ILogger<MyController> logger,
+      IHttpClientFactory httpClientFactory)
+      : ControllerBase
+  ```
+- Always use `[ApiController]` and `[Route("api/[controller]/[action]")]` attributes
+- Return `StatusCode(200, response)` for success, `StatusCode(400, new ApiException { ExceptionCode = ExceptionCodes.Xxx })` for errors
+- Use `[FromBody]` for request models, `[FromQuery]` for query parameters
+- Keep controllers simple; extract reusable logic to private helper methods
+- No try-catch in controllers (let global exception handler catch errors)
+
+### Dependency Injection
+- Register services in `Program.cs`:
+  - `builder.Services.AddSingleton<MyService>()` for singleton services
+  - `builder.Services.AddScoped<MyService>()` for scoped services (default for DbContext)
+  - `builder.Services.AddTransient<MyService>()` for transient services
+  - `builder.Services.AddHostedService<MyBackgroundWorker>()` for background workers
+  - `builder.Services.Configure<MySettings>(builder.Configuration.GetSection("MySettings"))` for options pattern
+- Always use `IHttpClientFactory` instead of `new HttpClient()`
+- Use `IOptions<T>` or `IOptionsSnapshot<T>` for configuration settings
+
+### Logging
+- Inject `ILogger<T>` via constructor
+- Use structured logging with context prefixes: `logger.LogInformation("[ActionName] User {Email} logged in", email)`
+- Log levels:
+  - `LogInformation` for normal operations
+  - `LogWarning` for unusual but expected situations
+  - `LogError` for errors with exception: `logger.LogError(ex, "[ActionName] Error message")`
+- Include relevant context (email, userId, etc.) in log messages
+
+### Exception Handling
+- Return `ApiException` with `ExceptionCode` from `ExceptionCodes` constants
+- Use appropriate HTTP status codes:
+  - `400` for validation errors, bad requests
+  - `200` for success (even when returning error details in response body)
+  - `401` for unauthorized
+  - `500` for unexpected errors
+- Never throw exceptions from controllers; return error responses instead
+- Global exception handler (`ConfigureCustomExceptionHandler`) handles unhandled exceptions
+
+### Code Style
+- Keep code simple, clear, and readable
+- Use async/await for all I/O operations
+- Use EF Core async methods: `FirstOrDefaultAsync()`, `AnyAsync()`, `SaveChangesAsync()`
+- Extract complex logic to private helper methods
+- Use meaningful variable names
+- No unnecessary abstractions or patterns
+
+---
