@@ -40,7 +40,7 @@
 
 .category-tab {
   padding: 14px 24px;
-  border: none !important;
+  border: none;
   background: transparent;
   color: #666;
   font-size: 18px;
@@ -57,16 +57,6 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  outline: none !important;
-}
-
-.category-tab:focus,
-.category-tab:focus-visible,
-.category-tab:active,
-.category-tab:hover {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 .category-tab:active {

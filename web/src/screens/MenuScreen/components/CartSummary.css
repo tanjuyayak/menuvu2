@@ -54,16 +54,10 @@
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  outline: none !important;
 }
 
 .view-basket-button:active {
   background: #1a1a1a;
-}
-
-.view-basket-button:focus,
-.view-basket-button:focus-visible {
-  outline: none !important;
 }
 
 @media (min-width: 768px) {

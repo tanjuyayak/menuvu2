@@ -20,7 +20,6 @@ textarea {
   outline-width: 0 !important;
   outline-style: none !important;
   outline-color: transparent !important;
-  border-color: inherit !important;
   box-shadow: none !important;
   -webkit-tap-highlight-color: transparent !important;
 }

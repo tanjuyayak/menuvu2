@@ -103,36 +103,16 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  outline: none !important;
   line-height: 1;
 }
 
 .basket-modal-close:active {
   background: #333;
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.basket-modal-close:focus,
-.basket-modal-close:focus-visible,
-.basket-modal-close:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 .basket-modal-content {
   flex: 1;
   padding: 20px;
-  outline: none !important;
-}
-
-.basket-modal-content:focus,
-.basket-modal-content:focus-visible,
-.basket-modal-content:focus-within {
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 .basket-empty {
@@ -166,21 +146,8 @@
   justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 1px solid #f5f5f5;
-  outline: none !important;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
-}
-
-.basket-item:focus,
-.basket-item:focus-visible,
-.basket-item:active,
-.basket-item:hover {
-  outline: none !important;
-  border-bottom: 1px solid #f5f5f5 !important;
-  box-shadow: none !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
 }
 
 
@@ -260,23 +227,11 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  outline: none !important;
   line-height: 1;
 }
 
 .basket-quantity-button:active {
   background: #333;
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.basket-quantity-button:focus,
-.basket-quantity-button:focus-visible,
-.basket-quantity-button:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 .basket-quantity-button.remove {
@@ -287,17 +242,6 @@
 
 .basket-quantity-button.remove:active {
   background: #e8e8e8;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.basket-quantity-button.remove:focus,
-.basket-quantity-button.remove:focus-visible,
-.basket-quantity-button.remove:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 .basket-quantity-display {
@@ -313,15 +257,6 @@
   padding: 12px 16px;
   border-top: 1px solid #f0f0f0;
   flex-shrink: 0;
-  outline: none !important;
-}
-
-.basket-total-section:focus,
-.basket-total-section:focus-visible,
-.basket-total-section:focus-within {
-  outline: none !important;
-  border-top: 1px solid #f0f0f0 !important;
-  box-shadow: none !important;
 }
 
 .basket-total-row {
@@ -346,15 +281,6 @@
   padding: 12px 16px;
   border-top: 1px solid #f0f0f0;
   flex-shrink: 0;
-  outline: none !important;
-}
-
-.basket-note-section:focus,
-.basket-note-section:focus-visible,
-.basket-note-section:focus-within {
-  outline: none !important;
-  border-top: 1px solid #f0f0f0 !important;
-  box-shadow: none !important;
 }
 
 .basket-note-input {
@@ -367,7 +293,6 @@
   color: #1a1a1a;
   background: #ffffff;
   resize: none;
-  outline: none !important;
   transition: border-color 0.2s ease;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -378,12 +303,10 @@
 .basket-note-input:focus-visible,
 .basket-note-input:active,
 .basket-note-input:hover {
-  outline: none !important;
-  border-color: #e0e0e0 !important;
-  box-shadow: none !important;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+  border-color: #e0e0e0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .basket-note-input::placeholder {
@@ -410,22 +333,10 @@
   min-height: 48px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  outline: none !important;
 }
 
 .confirm-order-button:active {
   background: #333;
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.confirm-order-button:focus,
-.confirm-order-button:focus-visible,
-.confirm-order-button:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 @media (min-width: 768px) {

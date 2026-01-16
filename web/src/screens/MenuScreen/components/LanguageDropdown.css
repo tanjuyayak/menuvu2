@@ -20,21 +20,12 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  outline: none !important;
   line-height: 1;
 }
 
 .language-button:active {
   background: #ffffff;
   color: #1a1a1a;
-}
-
-.language-button:focus,
-.language-button:focus-visible,
-.language-button:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 .language-button.selected {
