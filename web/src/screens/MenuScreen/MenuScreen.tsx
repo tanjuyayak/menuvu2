@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { MenuData, Category, MenuItem } from '../../types/menu';
 import { getCurrentLanguage, setLanguage, getAvailableLanguages, t } from '../../i18n';
 import menuData from '../../testmenu.json';
@@ -27,6 +27,7 @@ export const MenuScreen = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [currentLang, setCurrentLang] = useState<string>(getCurrentLanguage());
   const [isBasketModalOpen, setIsBasketModalOpen] = useState<boolean>(false);
+  const menuScreenRef = useRef<HTMLDivElement>(null);
 
   const selectedCategory = useMemo(() => {
     return menu.categories.find(cat => cat.id === selectedCategoryId);
@@ -156,8 +157,15 @@ export const MenuScreen = () => {
     };
   }, [isBasketModalOpen]);
 
+  // Scroll to top when category changes
+  useEffect(() => {
+    if (menuScreenRef.current) {
+      menuScreenRef.current.scrollTop = 0;
+    }
+  }, [selectedCategoryId]);
+
   return (
-    <div className={`menu-screen ${isBasketModalOpen ? 'modal-open' : ''}`}>
+    <div ref={menuScreenRef} className={`menu-screen ${isBasketModalOpen ? 'modal-open' : ''}`}>
       <header className="menu-header">
         <h1 className="menu-title">Menu</h1>
         <LanguageDropdown
