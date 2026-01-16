@@ -60,7 +60,8 @@
   z-index: 1;
   overflow-y: scroll;
   overflow-x: hidden;
-  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
+  overscroll-behavior-x: none;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
 }
