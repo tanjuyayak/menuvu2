@@ -27,7 +27,7 @@ export const MenuScreen = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [currentLang, setCurrentLang] = useState<string>(getCurrentLanguage());
   const [isBasketModalOpen, setIsBasketModalOpen] = useState<boolean>(false);
-  const menuScreenRef = useRef<HTMLDivElement>(null);
+  const [contentKey, setContentKey] = useState<number>(0);
 
   const selectedCategory = useMemo(() => {
     return menu.categories.find(cat => cat.id === selectedCategoryId);
@@ -143,12 +143,14 @@ export const MenuScreen = () => {
     });
   };
 
-  // Prevent body scrolling when modal is open
+  // Prevent body scrolling when modal is open and reset content key when modal closes
   useEffect(() => {
     if (isBasketModalOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+      // Force re-render of menu content to reset alignment
+      setContentKey(prev => prev + 1);
     }
 
     // Cleanup on unmount
@@ -157,15 +159,18 @@ export const MenuScreen = () => {
     };
   }, [isBasketModalOpen]);
 
-  // Scroll to top when category changes
+  // Reset content key when category changes to ensure alignment
   useEffect(() => {
-    if (menuScreenRef.current) {
-      menuScreenRef.current.scrollTop = 0;
-    }
+    setContentKey(prev => prev + 1);
   }, [selectedCategoryId]);
 
+  // Reset content key when language changes
+  useEffect(() => {
+    setContentKey(prev => prev + 1);
+  }, [currentLang]);
+
   return (
-    <div ref={menuScreenRef} className={`menu-screen ${isBasketModalOpen ? 'modal-open' : ''}`}>
+    <div className={`menu-screen ${isBasketModalOpen ? 'modal-open' : ''}`}>
       <header className="menu-header">
         <h1 className="menu-title">Menu</h1>
         <LanguageDropdown
@@ -180,7 +185,9 @@ export const MenuScreen = () => {
         onSelectCategory={setSelectedCategoryId}
       />
 
-      <main className="menu-content">
+      <div className="menu-content-spacer" />
+
+      <main key={contentKey} className="menu-content">
         {selectedCategory && (
           <MenuItemsList
             items={selectedCategory.items}

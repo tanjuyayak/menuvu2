@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { getCurrentLanguage } from '../../../i18n';
 import { MenuItem } from '../../../types/menu';
 import './BasketModal.css';
@@ -27,6 +28,7 @@ export const BasketModal = ({
   onRemoveItem,
 }: BasketModalProps) => {
   const currentLang = getCurrentLanguage();
+  const noteTextareaRef = useRef<HTMLTextAreaElement>(null);
 
   const totalPrice = cart.reduce((sum, cartItem) => sum + (cartItem.item.price * cartItem.quantity), 0);
 
@@ -34,14 +36,34 @@ export const BasketModal = ({
     return item.name[currentLang] || item.name['en'] || '';
   };
 
+  // Blur textarea when modal closes to ensure keyboard dismisses
+  useEffect(() => {
+    return () => {
+      if (noteTextareaRef.current) {
+        noteTextareaRef.current.blur();
+      }
+    };
+  }, []);
+
+  const handleClose = () => {
+    // Blur textarea before closing to dismiss keyboard
+    if (noteTextareaRef.current) {
+      noteTextareaRef.current.blur();
+    }
+    // Small delay to ensure keyboard has dismissed
+    setTimeout(() => {
+      onClose();
+    }, 100);
+  };
+
   return (
-    <div className="basket-modal-overlay" onClick={onClose}>
+    <div className="basket-modal-overlay" onClick={handleClose}>
       <div className="basket-modal" onClick={(e) => e.stopPropagation()}>
         <div className="basket-modal-header">
           <h2 className="basket-modal-title">Basket</h2>
           <button
             className="basket-modal-close"
-            onClick={onClose}
+            onClick={handleClose}
             aria-label="Close basket"
           >
             ×
@@ -99,6 +121,7 @@ export const BasketModal = ({
 
             <div className="basket-note-section">
               <textarea
+                ref={noteTextareaRef}
                 className="basket-note-input"
                 placeholder="Add a note (optional)"
                 rows={2}
