@@ -13,11 +13,10 @@
   gap: 12px;
   max-width: 100%;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
 .cart-summary:active {
-  transform: scale(0.98);
+  opacity: 1;
 }
 
 .cart-icon {
@@ -52,7 +51,6 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
@@ -60,8 +58,7 @@
 }
 
 .view-basket-button:active {
-  transform: scale(0.98);
-  background: #333;
+  background: #1a1a1a;
 }
 
 .view-basket-button:focus,

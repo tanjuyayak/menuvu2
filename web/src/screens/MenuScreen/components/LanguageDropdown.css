@@ -14,19 +14,18 @@
   font-weight: 500;
   color: #1a1a1a;
   cursor: pointer;
-  transition: all 0.2s ease;
   min-height: 40px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
 .language-dropdown-trigger:active {
-  transform: scale(0.98);
-  border-color: #1a1a1a;
+  border-color: #e0e0e0;
+  opacity: 1;
 }
 
 .language-dropdown-trigger:hover {
-  border-color: #1a1a1a;
+  border-color: #e0e0e0;
 }
 
 .language-dropdown-text {
@@ -37,7 +36,6 @@
 .language-dropdown-arrow {
   font-size: 10px;
   color: #666;
-  transition: transform 0.2s ease;
   display: inline-block;
 }
 
@@ -80,7 +78,6 @@
   font-weight: 500;
   color: #1a1a1a;
   cursor: pointer;
-  transition: background 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -94,7 +91,7 @@
 }
 
 .language-dropdown-item:active {
-  background: #f5f5f5;
+  background: transparent;
 }
 
 .language-dropdown-item.active {

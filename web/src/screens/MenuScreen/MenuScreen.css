@@ -1,10 +1,16 @@
 .menu-screen {
   min-height: 100vh;
+  height: 100vh;
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .menu-screen.modal-open {
@@ -30,6 +36,9 @@
   isolation: isolate;
   height: 65px;
   box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: auto;
 }
 
 .menu-title {
@@ -44,8 +53,14 @@
 .menu-content {
   flex: 1;
   padding: 20px 16px;
-  padding-top: 135px;
+  padding-top: 139px;
+  padding-bottom: 20px;
   max-width: 100%;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (min-width: 768px) {
@@ -64,7 +79,7 @@
 
   .menu-content {
     padding: 24px 32px;
-    padding-top: 147px;
+    padding-top: 151px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
