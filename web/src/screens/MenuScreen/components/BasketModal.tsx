@@ -48,13 +48,15 @@ export const BasketModal = ({
           </button>
         </div>
 
-        <div className="basket-modal-content">
-          {cart.length === 0 ? (
+        {cart.length === 0 ? (
+          <div className="basket-modal-content">
             <div className="basket-empty">
               <p>Your basket is empty</p>
             </div>
-          ) : (
-            <>
+          </div>
+        ) : (
+          <>
+            <div className="basket-items-scrollable">
               <div className="basket-items">
                 {cart.map((cartItem) => {
                   const itemTotal = cartItem.item.price * cartItem.quantity;
@@ -100,24 +102,24 @@ export const BasketModal = ({
                   );
                 })}
               </div>
+            </div>
 
-              <div className="basket-total-section">
-                <div className="basket-total-row">
-                  <span className="basket-total-label">Total</span>
-                  <span className="basket-total-amount">{formatPrice(totalPrice)}€</span>
-                </div>
-              </div>
+            <div className="basket-note-section">
+              <textarea
+                className="basket-note-input"
+                placeholder="Add a note (optional)"
+                rows={2}
+              />
+            </div>
 
-              <div className="basket-note-section">
-                <textarea
-                  className="basket-note-input"
-                  placeholder="Add a note (optional)"
-                  rows={3}
-                />
+            <div className="basket-total-section">
+              <div className="basket-total-row">
+                <span className="basket-total-label">Total</span>
+                <span className="basket-total-amount">{formatPrice(totalPrice)}€</span>
               </div>
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
 
         {cart.length > 0 && (
           <div className="basket-modal-footer">
