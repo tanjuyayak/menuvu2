@@ -49,6 +49,7 @@
   flex-direction: column;
   animation: slideUp 0.3s ease;
   overflow: hidden;
+  position: relative;
 }
 
 @keyframes slideUp {
@@ -66,7 +67,17 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 1001;
+  flex-shrink: 0;
+  height: 62px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 .basket-modal-title {
@@ -77,14 +88,14 @@
 }
 
 .basket-modal-close {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
   border: none;
   background: #1a1a1a;
   color: #ffffff;
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -137,6 +148,8 @@
   -webkit-overflow-scrolling: touch;
   min-height: 0;
   overscroll-behavior: none;
+  padding-top: 62px;
+  box-sizing: border-box;
 }
 
 .basket-items {
@@ -425,10 +438,20 @@
     border-radius: 0;
     height: 100%;
     max-height: 100%;
+    position: relative;
   }
-
+  
   .basket-modal-header {
     padding: 16px 20px;
+    height: 68px;
+    max-width: 500px;
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+  }
+  
+  .basket-items-scrollable {
+    padding-top: 68px;
   }
 
   .basket-modal-title {
@@ -436,9 +459,9 @@
   }
 
   .basket-modal-close {
-    width: 48px;
-    height: 48px;
-    font-size: 26px;
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
   }
 
   .basket-note-section {
