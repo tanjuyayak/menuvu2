@@ -19,7 +19,7 @@
 
 .category-tabs {
   display: flex;
-  gap: 10px;
+  gap: 6px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -97,7 +97,7 @@
   }
 
   .category-tabs {
-    gap: 12px;
+    gap: 8px;
     padding: 20px 0 0;
     height: 68px;
   }
