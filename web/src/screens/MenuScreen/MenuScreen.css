@@ -14,8 +14,11 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: none;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 100;
   isolation: isolate;
   height: 65px;
@@ -34,6 +37,7 @@
 .menu-content {
   flex: 1;
   padding: 20px 16px;
+  padding-top: 135px;
   max-width: 100%;
 }
 
@@ -53,6 +57,7 @@
 
   .menu-content {
     padding: 24px 32px;
+    padding-top: 147px;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;

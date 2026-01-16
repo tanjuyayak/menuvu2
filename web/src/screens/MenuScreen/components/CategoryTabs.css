@@ -1,8 +1,11 @@
 .category-tabs-container {
   background: #ffffff;
-  border-bottom: 1px solid #f0f0f0;
-  position: sticky;
+  border-bottom: none;
+  position: fixed;
   top: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 90;
   padding: 0 16px;
   -webkit-tap-highlight-color: transparent;
@@ -32,7 +35,7 @@
 
 .category-tab {
   padding: 12px 20px;
-  border: none;
+  border: none !important;
   background: transparent;
   color: #666;
   font-size: 16px;
@@ -50,6 +53,16 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  outline: none !important;
+}
+
+.category-tab:focus,
+.category-tab:focus-visible,
+.category-tab:active,
+.category-tab:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .category-tab:active {
