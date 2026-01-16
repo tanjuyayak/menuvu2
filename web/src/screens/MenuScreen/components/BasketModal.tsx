@@ -62,18 +62,14 @@ export const BasketModal = ({
                   const itemTotal = cartItem.item.price * cartItem.quantity;
                   return (
                     <div key={cartItem.itemKey} className="basket-item">
-                      <div className="basket-item-image-container">
-                        <img 
-                          src={cartItem.item.image} 
-                          alt={getItemName(cartItem.item)}
-                          className="basket-item-image"
-                          loading="lazy"
-                        />
-                      </div>
                       <div className="basket-item-info">
                         <div className="basket-item-name">{getItemName(cartItem.item)}</div>
-                        <div className="basket-item-details">
+                        <div className="basket-item-price-info">
                           <span className="basket-item-unit-price">{formatPrice(cartItem.item.price)}€</span>
+                          <span className="basket-item-multiply"> × </span>
+                          <span className="basket-item-quantity-text">{cartItem.quantity}</span>
+                          <span className="basket-item-equals"> = </span>
+                          <span className="basket-item-total">{formatPrice(itemTotal)}€</span>
                         </div>
                       </div>
                       <div className="basket-item-controls">
@@ -93,9 +89,6 @@ export const BasketModal = ({
                           >
                             +
                           </button>
-                        </div>
-                        <div className="basket-item-total">
-                          {formatPrice(itemTotal)}€
                         </div>
                       </div>
                     </div>

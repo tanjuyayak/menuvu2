@@ -150,6 +150,7 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  justify-content: space-between;
   padding-bottom: 16px;
   border-bottom: 1px solid #f5f5f5;
   outline: none !important;
@@ -169,43 +170,6 @@
   border-right: none !important;
 }
 
-.basket-item-image-container {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #f5f5f5;
-  outline: none !important;
-  border: none !important;
-}
-
-.basket-item-image-container:focus,
-.basket-item-image-container:focus-visible,
-.basket-item-image-container:active,
-.basket-item-image-container:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.basket-item-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  outline: none !important;
-  border: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.basket-item-image:focus,
-.basket-item-image:focus-visible,
-.basket-item-image:active,
-.basket-item-image:hover {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
 
 .basket-item:last-child {
   border-bottom: none;
@@ -216,7 +180,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -226,22 +190,39 @@
   color: #1a1a1a;
 }
 
-.basket-item-details {
+.basket-item-price-info {
   display: flex;
-  gap: 12px;
-  font-size: 13px;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
   color: #666;
+  flex-wrap: wrap;
 }
 
 .basket-item-unit-price {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.basket-item-multiply,
+.basket-item-equals {
   color: #999;
+}
+
+.basket-item-quantity-text {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.basket-item-total {
+  color: #1a1a1a;
+  font-weight: 700;
 }
 
 .basket-item-controls {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .basket-item-quantity-controls {
@@ -314,12 +295,6 @@
   color: #1a1a1a;
 }
 
-.basket-item-total {
-  font-size: 16px;
-  font-weight: 700;
-  color: #1a1a1a;
-  white-space: nowrap;
-}
 
 .basket-total-section {
   padding: 12px 16px;
@@ -502,9 +477,6 @@
     font-size: 20px;
   }
 
-  .basket-item-total {
-    font-size: 17px;
-  }
 
   .basket-total-label {
     font-size: 17px;
