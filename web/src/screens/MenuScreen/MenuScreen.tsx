@@ -143,14 +143,12 @@ export const MenuScreen = () => {
     });
   };
 
-  // Prevent body scrolling when modal is open and reset content key when modal closes
+  // Prevent body scrolling when modal is open
   useEffect(() => {
     if (isBasketModalOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
-      // Force re-render of menu content to reset alignment
-      setContentKey(prev => prev + 1);
     }
 
     // Cleanup on unmount
