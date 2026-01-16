@@ -12,9 +12,6 @@
   isolation: isolate;
   height: 64px;
   box-sizing: border-box;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: auto;
 }
 
 .category-tabs {
@@ -83,16 +80,12 @@
   .category-tabs-container {
     padding: 0 32px;
     top: 73px;
-    height: 64px;
+    height: 68px;
   }
 
   .category-tabs {
     gap: 8px;
     padding: 20px 0 0;
-    height: 68px;
-  }
-  
-  .category-tabs-container {
     height: 68px;
   }
 

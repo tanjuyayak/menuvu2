@@ -35,9 +35,6 @@
   isolation: isolate;
   height: 65px;
   box-sizing: border-box;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: auto;
 }
 
 .menu-title {
@@ -50,21 +47,22 @@
 
 
 .menu-content {
-  flex: 1;
+  position: fixed;
+  top: 129px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 100px;
-  padding-top: 129px;
+  padding-top: 0;
   max-width: 100%;
-  margin-top: 0;
-  position: relative;
   z-index: 1;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
-  min-height: 0;
 }
 
 @media (min-width: 768px) {
@@ -78,11 +76,10 @@
   }
 
   .menu-content {
+    top: 141px;
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 120px;
-    padding-top: 141px;
-    margin-top: 0;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
