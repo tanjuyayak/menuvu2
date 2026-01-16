@@ -7,6 +7,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.menu-screen.modal-open {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
 .menu-header {
   background: #ffffff;
   padding: 16px 20px;

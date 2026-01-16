@@ -14,6 +14,8 @@ type BasketModalProps = {
   onClose: () => void;
   onConfirmOrder: () => void;
   formatPrice: (cents: number) => string;
+  onAddItem: (itemKey: string) => void;
+  onRemoveItem: (itemKey: string) => void;
 };
 
 export const BasketModal = ({
@@ -21,6 +23,8 @@ export const BasketModal = ({
   onClose,
   onConfirmOrder,
   formatPrice,
+  onAddItem,
+  onRemoveItem,
 }: BasketModalProps) => {
   const currentLang = getCurrentLanguage();
 
@@ -67,12 +71,30 @@ export const BasketModal = ({
                       <div className="basket-item-info">
                         <div className="basket-item-name">{getItemName(cartItem.item)}</div>
                         <div className="basket-item-details">
-                          <span className="basket-item-quantity">{cartItem.quantity}x</span>
                           <span className="basket-item-unit-price">{formatPrice(cartItem.item.price)}€</span>
                         </div>
                       </div>
-                      <div className="basket-item-total">
-                        {formatPrice(itemTotal)}€
+                      <div className="basket-item-controls">
+                        <div className="basket-item-quantity-controls">
+                          <button
+                            className="basket-quantity-button remove"
+                            onClick={() => onRemoveItem(cartItem.itemKey)}
+                            aria-label="Remove one"
+                          >
+                            −
+                          </button>
+                          <span className="basket-quantity-display">{cartItem.quantity}</span>
+                          <button
+                            className="basket-quantity-button add"
+                            onClick={() => onAddItem(cartItem.itemKey)}
+                            aria-label="Add one"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <div className="basket-item-total">
+                          {formatPrice(itemTotal)}€
+                        </div>
                       </div>
                     </div>
                   );

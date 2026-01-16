@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { MenuData, Category, MenuItem } from '../../types/menu';
 import { getCurrentLanguage, setLanguage, getAvailableLanguages, t } from '../../i18n';
 import menuData from '../../testmenu.json';
@@ -104,8 +104,60 @@ export const MenuScreen = () => {
     // You can add order submission logic here
   };
 
+  const handleAddItemInBasket = (itemKey: string) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(
+        cartItem => cartItem.itemKey === itemKey
+      );
+      
+      if (existingItem) {
+        return prevCart.map(cartItem =>
+          cartItem.itemKey === itemKey
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      }
+      
+      return prevCart;
+    });
+  };
+
+  const handleRemoveItemInBasket = (itemKey: string) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(
+        cartItem => cartItem.itemKey === itemKey
+      );
+      
+      if (existingItem && existingItem.quantity > 1) {
+        return prevCart.map(cartItem =>
+          cartItem.itemKey === itemKey
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        );
+      }
+      
+      return prevCart.filter(
+        cartItem => cartItem.itemKey !== itemKey
+      );
+    });
+  };
+
+  // Prevent body scrolling when modal is open
+  useEffect(() => {
+    if (isBasketModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isBasketModalOpen]);
+
   return (
-    <div className="menu-screen">
+    <div className={`menu-screen ${isBasketModalOpen ? 'modal-open' : ''}`}>
       <header className="menu-header">
         <h1 className="menu-title">Menu</h1>
         <LanguageDropdown
@@ -148,6 +200,8 @@ export const MenuScreen = () => {
           onClose={() => setIsBasketModalOpen(false)}
           onConfirmOrder={handleConfirmOrder}
           formatPrice={formatPrice}
+          onAddItem={handleAddItemInBasket}
+          onRemoveItem={handleRemoveItemInBasket}
         />
       )}
     </div>
