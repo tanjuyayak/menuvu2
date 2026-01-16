@@ -1,6 +1,6 @@
 .category-tabs-container {
   background: #ffffff;
-  border-bottom: none;
+  border-bottom: 1px solid #f0f0f0;
   position: fixed;
   top: 65px;
   left: 0;
@@ -12,23 +12,25 @@
   isolation: isolate;
   height: 64px;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .category-tabs {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 16px 0 0;
+  padding: 12px 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
   height: 64px;
   box-sizing: border-box;
-  align-items: flex-start;
+  align-items: center;
   touch-action: pan-x;
   -ms-touch-action: pan-x;
+  position: relative;
 }
 
 .category-tabs::-webkit-scrollbar {
@@ -36,44 +38,36 @@
 }
 
 .category-tab {
-  padding: 14px 24px;
+  padding: 10px 20px;
   border: none;
   background: transparent;
   color: #666;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
   position: relative;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 0;
+  height: 40px;
+  min-width: fit-content;
+  border-radius: 8px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   flex-shrink: 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  transition: all 0.2s ease;
 }
 
 .category-tab:active {
-  opacity: 1;
+  transform: scale(0.96);
 }
 
 .category-tab.active {
-  color: #1a1a1a;
-  font-weight: 600;
-}
-
-.category-tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
   background: #1a1a1a;
-  border-radius: 0;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -84,14 +78,14 @@
   }
 
   .category-tabs {
-    gap: 8px;
-    padding: 20px 0 0;
+    gap: 10px;
+    padding: 14px 0;
     height: 68px;
   }
 
   .category-tab {
-    font-size: 19px;
-    padding: 16px 28px;
-    height: 52px;
+    font-size: 16px;
+    padding: 12px 24px;
+    height: 44px;
   }
 }
