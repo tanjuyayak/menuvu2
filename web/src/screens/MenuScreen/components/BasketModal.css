@@ -457,14 +457,12 @@
     padding: 24px;
   }
 
-  .basket-item-image-container {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-  }
-
   .basket-item-name {
     font-size: 17px;
+  }
+  
+  .basket-item-price-info {
+    font-size: 15px;
   }
 
   .basket-quantity-button {
