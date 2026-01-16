@@ -6,6 +6,7 @@ import { CategoryTabs } from './components/CategoryTabs';
 import { MenuItemsList } from './components/MenuItemsList';
 import { CartSummary } from './components/CartSummary';
 import { LanguageDropdown } from './components/LanguageDropdown';
+import { BasketModal } from './components/BasketModal';
 import './MenuScreen.css';
 
 const menu = menuData as MenuData;
@@ -25,6 +26,7 @@ export const MenuScreen = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>(menu.categories[0]?.id || '');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [currentLang, setCurrentLang] = useState<string>(getCurrentLanguage());
+  const [isBasketModalOpen, setIsBasketModalOpen] = useState<boolean>(false);
 
   const selectedCategory = useMemo(() => {
     return menu.categories.find(cat => cat.id === selectedCategoryId);
@@ -95,6 +97,13 @@ export const MenuScreen = () => {
     return (cents / 100).toFixed(2);
   };
 
+  const handleConfirmOrder = () => {
+    // TODO: Implement order confirmation
+    console.log('Order confirmed:', cart);
+    setIsBasketModalOpen(false);
+    // You can add order submission logic here
+  };
+
   return (
     <div className="menu-screen">
       <header className="menu-header">
@@ -128,6 +137,16 @@ export const MenuScreen = () => {
         <CartSummary
           totalItems={totalItems}
           totalPrice={totalPrice}
+          formatPrice={formatPrice}
+          onViewBasket={() => setIsBasketModalOpen(true)}
+        />
+      )}
+
+      {isBasketModalOpen && (
+        <BasketModal
+          cart={cart}
+          onClose={() => setIsBasketModalOpen(false)}
+          onConfirmOrder={handleConfirmOrder}
           formatPrice={formatPrice}
         />
       )}

@@ -12,6 +12,12 @@
   align-items: center;
   gap: 12px;
   max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cart-summary:active {
+  transform: scale(0.98);
 }
 
 .cart-icon {

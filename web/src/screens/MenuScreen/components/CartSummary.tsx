@@ -4,15 +4,17 @@ type CartSummaryProps = {
   totalItems: number;
   totalPrice: number;
   formatPrice: (cents: number) => string;
+  onViewBasket: () => void;
 };
 
 export const CartSummary = ({
   totalItems,
   totalPrice,
   formatPrice,
+  onViewBasket,
 }: CartSummaryProps) => {
   return (
-    <div className="cart-summary">
+    <div className="cart-summary" onClick={onViewBasket}>
       <div className="cart-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5 8C4.44772 8 4 8.44772 4 9V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V9C20 8.44772 19.5523 8 19 8H5ZM6 10H18V19H6V10Z" fill="currentColor"/>
@@ -26,7 +28,7 @@ export const CartSummary = ({
       <div className="cart-items-text">
         {totalItems} {totalItems === 1 ? 'item' : 'items'} added
       </div>
-      <button className="view-basket-button">
+      <button className="view-basket-button" onClick={onViewBasket}>
         View Basket
       </button>
     </div>
