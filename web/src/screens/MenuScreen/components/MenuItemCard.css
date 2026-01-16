@@ -213,7 +213,7 @@
   height: 44px;
   border-radius: 4px;
   border: none;
-  background: #f8f9fa;
+  background: #e8e8e8;
   color: #1a1a1a;
   font-size: 24px;
   font-weight: 500;
@@ -227,12 +227,12 @@
 }
 
 .quantity-button.remove {
-  background: #f8f9fa;
+  background: #e8e8e8;
   color: #1a1a1a;
 }
 
 .quantity-button.remove:active {
-  background: #f8f9fa;
+  background: #e8e8e8;
   color: #1a1a1a;
 }
 
