@@ -252,16 +252,15 @@
 }
 
 .basket-quantity-button {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 4px;
   border: none;
   background: #1a1a1a;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,9 +494,9 @@
   }
 
   .basket-quantity-button {
-    width: 36px;
-    height: 36px;
-    font-size: 17px;
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
   }
 
   .basket-quantity-display {
