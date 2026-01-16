@@ -185,8 +185,6 @@ export const MenuScreen = () => {
         onSelectCategory={setSelectedCategoryId}
       />
 
-      <div className="menu-content-spacer" />
-
       <main key={contentKey} className="menu-content">
         {selectedCategory && (
           <MenuItemsList
