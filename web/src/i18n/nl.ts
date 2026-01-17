@@ -1,0 +1,18 @@
+export const nl = {
+  'common.cart': 'Winkelwagen',
+  'common.items': 'artikelen',
+  'common.add': 'Toevoegen',
+  'common.viewBasket': 'Bekijk Winkelwagen',
+  'common.total': 'Totaal',
+  'common.addToCart': 'Toevoegen aan Winkelwagen',
+  'common.confirmOrder': 'Bestelling Bevestigen',
+  'common.close': 'Sluiten',
+  'basket.title': 'Winkelwagen',
+  'basket.empty': 'Je winkelwagen is leeg',
+  'basket.noteOptional': 'Voeg een notitie toe (optioneel)',
+  'menu.title': 'Menu',
+  'menu.noItems': 'Geen artikelen beschikbaar in deze categorie',
+  'api.exceptionCodes.general': 'Er is een fout opgetreden. Probeer het opnieuw.',
+  'api.exceptionCodes.NETWORK_ERROR': 'Netwerkfout. Controleer je verbinding.',
+  'api.exceptionCodes.GENERAL_ERROR': 'Er is een fout opgetreden. Probeer het opnieuw.',
+};

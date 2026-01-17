@@ -1,0 +1,18 @@
+export const en = {
+  'common.cart': 'Cart',
+  'common.items': 'items',
+  'common.add': 'Add',
+  'common.viewBasket': 'View Basket',
+  'common.total': 'Total',
+  'common.addToCart': 'Add to Cart',
+  'common.confirmOrder': 'Confirm Order',
+  'common.close': 'Close',
+  'basket.title': 'Basket',
+  'basket.empty': 'Your basket is empty',
+  'basket.noteOptional': 'Add a note (optional)',
+  'menu.title': 'Menu',
+  'menu.noItems': 'No items available in this category',
+  'api.exceptionCodes.general': 'An error occurred. Please try again.',
+  'api.exceptionCodes.NETWORK_ERROR': 'Network error. Please check your connection.',
+  'api.exceptionCodes.GENERAL_ERROR': 'An error occurred. Please try again.',
+};

@@ -1,7 +1,16 @@
 import menuData from '../testmenu.json';
 import { MenuData } from '../types/menu';
+import { en } from './en';
+import { nl } from './nl';
 
 const menu = menuData as MenuData;
+
+type Translations = Record<string, string>;
+
+const translations: Record<string, Translations> = {
+  en,
+  nl,
+};
 
 let currentLanguage = menu.defaultLanguage;
 
@@ -20,49 +29,6 @@ export const getAvailableLanguages = (): MenuData['languages'] => {
 };
 
 export const t = (key: string): string => {
-  // For menu-specific translations, key format: "category.name" or "item.name"
-  const parts = key.split('.');
-  
-  if (parts.length === 2) {
-    const [type, id] = parts;
-    if (type === 'category') {
-      const category = menu.categories.find(cat => cat.id === id);
-      return category?.name[currentLanguage] || category?.name[menu.defaultLanguage] || key;
-    }
-    if (type === 'item') {
-      // This would need item context, handled differently
-      return key;
-    }
-  }
-  
-  // For common translations
-  const translations: Record<string, Record<string, string>> = {
-    'common.cart': {
-      en: 'Cart',
-      nl: 'Winkelwagen'
-    },
-    'common.items': {
-      en: 'items',
-      nl: 'artikelen'
-    },
-    'common.add': {
-      en: 'Add',
-      nl: 'Toevoegen'
-    },
-    'common.viewOrder': {
-      en: 'View Order',
-      nl: 'Bestelling Bekijken'
-    },
-    'common.total': {
-      en: 'Total',
-      nl: 'Totaal'
-    }
-  };
-  
-  const translation = translations[key];
-  if (translation) {
-    return translation[currentLanguage] || translation[menu.defaultLanguage] || key;
-  }
-  
-  return key;
+  const currentTranslations = translations[currentLanguage] || translations[menu.defaultLanguage];
+  return currentTranslations?.[key] || key;
 };
