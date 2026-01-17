@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
-import { MenuData, Category, MenuItem } from '../../../types/menu';
-import { getCurrentLanguage, setLanguage, getAvailableLanguages, t } from '../../../i18n';
-import menuData from '../../../testmenu.json';
+import { MenuData, Category, MenuItem } from '../../types/menu';
+import { getCurrentLanguage, setLanguage, getAvailableLanguages, t } from '../../i18n';
+import menuData from '../../testmenu.json';
 import { CategoryTabs } from './components/CategoryTabs';
 import { MenuItemsList } from './components/MenuItemsList';
 import { CartSummary } from './components/CartSummary';
