@@ -7,10 +7,18 @@
   flex-direction: row;
   position: relative;
   -webkit-tap-highlight-color: transparent;
-  gap: 12px;
   padding: 12px;
   padding-bottom: 56px;
   min-height: 124px;
+}
+
+.menu-item-clickable {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+  min-width: 0;
 }
 
 .menu-item-card:active {

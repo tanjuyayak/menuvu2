@@ -10,6 +10,7 @@ type MenuItemsListProps = {
   onRemoveFromCart: (item: MenuItem, categoryId: string, itemIndex: number) => void;
   getItemQuantity: (item: MenuItem, categoryId: string, itemIndex: number) => number;
   formatPrice: (cents: number) => string;
+  onItemClick: (item: MenuItem, categoryId: string, itemIndex: number) => void;
 };
 
 export const MenuItemsList = ({
@@ -19,6 +20,7 @@ export const MenuItemsList = ({
   onRemoveFromCart,
   getItemQuantity,
   formatPrice,
+  onItemClick,
 }: MenuItemsListProps) => {
   if (items.length === 0) {
     return (
@@ -40,6 +42,7 @@ export const MenuItemsList = ({
           onAdd={() => onAddToCart(item, categoryId, index)}
           onRemove={() => onRemoveFromCart(item, categoryId, index)}
           formatPrice={formatPrice}
+          onItemClick={() => onItemClick(item, categoryId, index)}
         />
       ))}
     </div>
