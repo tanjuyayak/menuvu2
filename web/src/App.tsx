@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuScreen } from './screens/MenuScreen/MenuScreen';
+import { MenuScreen } from './menu/MenuScreen/MenuScreen';
 import './App.css';
 
 function App() {
