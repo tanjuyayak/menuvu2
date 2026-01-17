@@ -19,6 +19,7 @@ export const en = {
   'common.loading': 'Loading...',
   'common.continue': 'Continue',
   'common.or': 'or',
+  'common.backToWebsite': 'Back to Website',
   
   // Basket
   'basket.title': 'Basket',

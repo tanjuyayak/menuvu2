@@ -19,6 +19,7 @@ export const nl = {
   'common.loading': 'Laden...',
   'common.continue': 'Doorgaan',
   'common.or': 'of',
+  'common.backToWebsite': 'Terug naar Website',
   
   // Basket
   'basket.title': 'Winkelwagen',
