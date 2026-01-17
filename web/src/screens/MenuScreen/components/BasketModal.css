@@ -104,6 +104,8 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   line-height: 1;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .basket-modal-close:active {
@@ -229,10 +231,13 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   line-height: 1;
+  transition: transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .basket-quantity-button:active {
-  background: #333;
+  transform: scale(0.95);
 }
 
 .basket-quantity-button.remove {
@@ -242,7 +247,7 @@
 }
 
 .basket-quantity-button.remove:active {
-  background: #e8e8e8;
+  transform: scale(0.95);
 }
 
 .basket-quantity-display {
@@ -297,6 +302,7 @@
   transition: border-color 0.2s ease;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -330,14 +336,16 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.15s ease;
   min-height: 48px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .confirm-order-button:active {
-  background: #333;
+  transform: scale(0.98);
 }
 
 @media (min-width: 768px) {

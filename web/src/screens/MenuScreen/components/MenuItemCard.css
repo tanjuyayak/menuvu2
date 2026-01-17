@@ -169,10 +169,13 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  transition: transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .add-button:active {
-  background: #1a1a1a;
+  transform: scale(0.95);
 }
 
 .quantity-controls {
@@ -202,10 +205,13 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  transition: transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .quantity-button-compact:active {
-  background: #1a1a1a;
+  transform: scale(0.95);
 }
 
 .quantity-button {
@@ -224,6 +230,9 @@
   box-shadow: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  transition: transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .quantity-button.remove {
@@ -232,12 +241,11 @@
 }
 
 .quantity-button.remove:active {
-  background: #e8e8e8;
-  color: #1a1a1a;
+  transform: scale(0.95);
 }
 
 .quantity-button:active {
-  opacity: 1;
+  transform: scale(0.95);
 }
 
 .quantity-button.add {
@@ -246,7 +254,7 @@
 }
 
 .quantity-button.add:active {
-  background: #1a1a1a;
+  transform: scale(0.95);
 }
 
 .quantity-display {

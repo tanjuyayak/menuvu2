@@ -59,6 +59,8 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   transition: transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .view-basket-button:active {
