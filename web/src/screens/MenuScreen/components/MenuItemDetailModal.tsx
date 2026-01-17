@@ -78,30 +78,48 @@ export const MenuItemDetailModal = ({
 
         <div className="item-detail-modal-footer">
           {quantity === 0 ? (
-            <button
-              className="item-detail-add-button"
-              onClick={onAddToCart}
-            >
-              Add to Cart
-            </button>
-          ) : (
-            <div className="item-detail-quantity-section">
+            <>
               <button
-                className="item-detail-quantity-button"
-                onClick={onRemoveFromCart}
-                aria-label="Remove one"
-              >
-                −
-              </button>
-              <span className="item-detail-quantity-display">{quantity}</span>
-              <button
-                className="item-detail-quantity-button"
+                className="item-detail-add-button"
                 onClick={onAddToCart}
-                aria-label="Add one"
               >
-                +
+                Add to Cart
               </button>
-            </div>
+              <button
+                className="item-detail-modal-close-footer"
+                onClick={onClose}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="item-detail-quantity-section">
+                <button
+                  className="item-detail-quantity-button remove"
+                  onClick={onRemoveFromCart}
+                  aria-label="Remove one"
+                >
+                  −
+                </button>
+                <span className="item-detail-quantity-display">{quantity}</span>
+                <button
+                  className="item-detail-quantity-button add"
+                  onClick={onAddToCart}
+                  aria-label="Add one"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                className="item-detail-modal-close-footer"
+                onClick={onClose}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </>
           )}
         </div>
       </div>
