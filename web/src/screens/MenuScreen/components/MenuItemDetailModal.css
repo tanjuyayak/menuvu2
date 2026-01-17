@@ -13,6 +13,26 @@
   height: 100dvh;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .item-detail-modal {
   background: #ffffff;
   width: 100%;
@@ -291,11 +311,23 @@
 }
 
 @media (min-width: 768px) {
+  .item-detail-modal-overlay {
+    align-items: center;
+  }
+
   .item-detail-modal {
     max-width: 500px;
+    width: 500px;
+    max-height: 90vh;
+    height: 90vh;
+    top: 50%;
     left: 50%;
     right: auto;
-    transform: translateX(-50%);
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    animation: fadeInScale 0.3s ease;
+    position: fixed;
   }
 
   .item-detail-modal-header {
