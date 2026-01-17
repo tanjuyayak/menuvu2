@@ -1,4 +1,5 @@
 export const nl = {
+  // Common
   'common.cart': 'Winkelwagen',
   'common.items': 'artikelen',
   'common.item': 'artikel',
@@ -13,12 +14,60 @@ export const nl = {
   'common.removeOne': 'Verwijder een',
   'common.addOne': 'Voeg een toe',
   'common.selectLanguage': 'Selecteer',
+  'common.login': 'Inloggen',
+  'common.logout': 'Uitloggen',
+  'common.loading': 'Laden...',
+  'common.continue': 'Doorgaan',
+  'common.or': 'of',
+  
+  // Basket
   'basket.title': 'Winkelwagen',
   'basket.empty': 'Je winkelwagen is leeg',
   'basket.noteOptional': 'Voeg een notitie toe (optioneel)',
+  
+  // Menu
   'menu.title': 'Menu',
   'menu.noItems': 'Geen artikelen beschikbaar in deze categorie',
+  
+  // Home
+  'home.heroTitle': 'Digitale Menu Oplossingen',
+  'home.heroSubtitle': 'Maak mooie, interactieve digitale menu\'s voor uw restaurant. Eenvoudig te beheren, heerlijk voor uw klanten.',
+  'home.partnerLogin': 'Partner Portaal',
+  'home.viewMenu': 'Bekijk Demo Menu',
+  'home.feature1Title': 'Eenvoudig Beheer',
+  'home.feature1Description': 'Werk uw menu in realtime bij vanaf elk apparaat. Geen technische vaardigheden vereist.',
+  'home.feature2Title': 'Meertalig',
+  'home.feature2Description': 'Bedien internationale gasten met automatische vertalingen in meerdere talen.',
+  'home.feature3Title': 'Analyses',
+  'home.feature3Description': 'Begrijp uw klanten beter met gedetailleerde inzichten en analyses.',
+  'home.allRightsReserved': 'Alle rechten voorbehouden.',
+  
+  // Auth
+  'auth.title': 'Partner Inloggen',
+  'auth.subtitle': 'Log veilig in met een code naar uw e-mail',
+  'auth.emailPlaceholder': 'Voer uw e-mail in',
+  'auth.continueWithGoogle': 'Doorgaan met Google',
+  'auth.registerTitle': 'Maak Uw Account',
+  'auth.registerSubtitle': 'Slechts een paar gegevens om te beginnen',
+  'auth.firstName': 'Voornaam',
+  'auth.lastName': 'Achternaam',
+  'auth.otpTitle': 'Verifieer Uw E-mail',
+  'auth.otpSubtitle': 'Voer de 6-cijferige code in die we hebben gestuurd naar',
+  'auth.otpPlaceholder': '000000',
+  'auth.resendCode': 'Code opnieuw verzenden',
+  'auth.privacyPolicy': 'Door door te gaan, gaat u akkoord met onze',
+  'auth.termsAndConditions': 'Algemene Voorwaarden',
+  'auth.and': 'en',
+  'auth.privacyPolicyLink': 'Privacybeleid',
+  
+  // API Error Codes
   'api.exceptionCodes.general': 'Er is een fout opgetreden. Probeer het opnieuw.',
   'api.exceptionCodes.NETWORK_ERROR': 'Netwerkfout. Controleer je verbinding.',
-  'api.exceptionCodes.GENERAL_ERROR': 'Er is een fout opgetreden. Probeer het opnieuw.',
+  'api.exceptionCodes.GENERAL_ERROR': 'Er ging iets mis. Probeer het opnieuw.',
+  'api.exceptionCodes.Validation': 'Ongeldige invoer. Controleer uw gegevens.',
+  'api.exceptionCodes.NotValidToken': 'Ongeldig authenticatietoken.',
+  'api.exceptionCodes.EmailExists': 'Dit e-mailadres is al geregistreerd.',
+  'api.exceptionCodes.InvalidLoginAccessCodeIdentifier': 'Ongeldige toegangscode sessie.',
+  'api.exceptionCodes.LoginAccessCodeExpired': 'Toegangscode is verlopen. Vraag een nieuwe aan.',
+  'api.exceptionCodes.WrongAccessCode': 'Onjuiste toegangscode. Probeer het opnieuw.',
 };

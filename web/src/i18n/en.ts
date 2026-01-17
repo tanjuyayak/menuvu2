@@ -1,4 +1,5 @@
 export const en = {
+  // Common
   'common.cart': 'Cart',
   'common.items': 'items',
   'common.item': 'item',
@@ -13,12 +14,60 @@ export const en = {
   'common.removeOne': 'Remove one',
   'common.addOne': 'Add one',
   'common.selectLanguage': 'Select',
+  'common.login': 'Login',
+  'common.logout': 'Logout',
+  'common.loading': 'Loading...',
+  'common.continue': 'Continue',
+  'common.or': 'or',
+  
+  // Basket
   'basket.title': 'Basket',
   'basket.empty': 'Your basket is empty',
   'basket.noteOptional': 'Add a note (optional)',
+  
+  // Menu
   'menu.title': 'Menu',
   'menu.noItems': 'No items available in this category',
+  
+  // Home
+  'home.heroTitle': 'Digital Menu Solutions',
+  'home.heroSubtitle': 'Create beautiful, interactive digital menus for your restaurant. Easy to manage, delightful for your customers.',
+  'home.partnerLogin': 'Partner Portal',
+  'home.viewMenu': 'View Demo Menu',
+  'home.feature1Title': 'Easy Management',
+  'home.feature1Description': 'Update your menu in real-time from any device. No technical skills required.',
+  'home.feature2Title': 'Multi-language',
+  'home.feature2Description': 'Serve international guests with automatic translations in multiple languages.',
+  'home.feature3Title': 'Analytics',
+  'home.feature3Description': 'Understand your customers better with detailed insights and analytics.',
+  'home.allRightsReserved': 'All rights reserved.',
+  
+  // Auth
+  'auth.title': 'Partner Login',
+  'auth.subtitle': 'Sign in securely with a code sent to your email',
+  'auth.emailPlaceholder': 'Enter your email',
+  'auth.continueWithGoogle': 'Continue with Google',
+  'auth.registerTitle': 'Create Your Account',
+  'auth.registerSubtitle': 'Just a few details to get you started',
+  'auth.firstName': 'First name',
+  'auth.lastName': 'Last name',
+  'auth.otpTitle': 'Verify Your Email',
+  'auth.otpSubtitle': 'Enter the 6-digit code we sent to',
+  'auth.otpPlaceholder': '000000',
+  'auth.resendCode': 'Resend code',
+  'auth.privacyPolicy': 'By continuing, you agree to our',
+  'auth.termsAndConditions': 'Terms and Conditions',
+  'auth.and': 'and',
+  'auth.privacyPolicyLink': 'Privacy Policy',
+  
+  // API Error Codes
   'api.exceptionCodes.general': 'An error occurred. Please try again.',
   'api.exceptionCodes.NETWORK_ERROR': 'Network error. Please check your connection.',
-  'api.exceptionCodes.GENERAL_ERROR': 'An error occurred. Please try again.',
+  'api.exceptionCodes.GENERAL_ERROR': 'Something went wrong. Please try again.',
+  'api.exceptionCodes.Validation': 'Invalid input. Please check your data.',
+  'api.exceptionCodes.NotValidToken': 'Invalid authentication token.',
+  'api.exceptionCodes.EmailExists': 'This email is already registered.',
+  'api.exceptionCodes.InvalidLoginAccessCodeIdentifier': 'Invalid access code session.',
+  'api.exceptionCodes.LoginAccessCodeExpired': 'Access code has expired. Please request a new one.',
+  'api.exceptionCodes.WrongAccessCode': 'Incorrect access code. Please try again.',
 };
