@@ -1,5 +1,5 @@
 import { MenuItem } from '../../../types/menu';
-import { getCurrentLanguage } from '../../../i18n';
+import { getCurrentLanguage, t } from '../../../i18n';
 import './MenuItemCard.css';
 
 type MenuItemCardProps = {
@@ -87,7 +87,7 @@ export const MenuItemCard = ({
           <button
             className="add-button"
             onClick={onAdd}
-            aria-label={`Add ${name} to cart`}
+            aria-label={t('common.addToCart')}
           >
             +
           </button>
@@ -96,7 +96,7 @@ export const MenuItemCard = ({
             <button
               className="quantity-button remove"
               onClick={onRemove}
-              aria-label="Remove one"
+              aria-label={t('common.removeOne')}
             >
               −
             </button>
@@ -104,7 +104,7 @@ export const MenuItemCard = ({
             <button
               className="quantity-button add"
               onClick={onAdd}
-              aria-label="Add one"
+              aria-label={t('common.addOne')}
             >
               +
             </button>

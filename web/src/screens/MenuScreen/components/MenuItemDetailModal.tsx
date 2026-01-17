@@ -1,5 +1,5 @@
 import { MenuItem } from '../../../types/menu';
-import { getCurrentLanguage } from '../../../i18n';
+import { getCurrentLanguage, t } from '../../../i18n';
 import './MenuItemDetailModal.css';
 
 type MenuItemDetailModalProps = {
@@ -31,7 +31,7 @@ export const MenuItemDetailModal = ({
           <button
             className="item-detail-modal-close"
             onClick={onClose}
-            aria-label="Close"
+            aria-label={t('common.close')}
           >
             ×
           </button>
@@ -83,12 +83,12 @@ export const MenuItemDetailModal = ({
                 className="item-detail-add-button"
                 onClick={onAddToCart}
               >
-                Add to Cart
+                {t('common.addToCart')}
               </button>
               <button
                 className="item-detail-modal-close-footer"
                 onClick={onClose}
-                aria-label="Close"
+                aria-label={t('common.close')}
               >
                 ×
               </button>
@@ -99,7 +99,7 @@ export const MenuItemDetailModal = ({
                 <button
                   className="item-detail-quantity-button remove"
                   onClick={onRemoveFromCart}
-                  aria-label="Remove one"
+                  aria-label={t('common.removeOne')}
                 >
                   −
                 </button>
@@ -107,7 +107,7 @@ export const MenuItemDetailModal = ({
                 <button
                   className="item-detail-quantity-button add"
                   onClick={onAddToCart}
-                  aria-label="Add one"
+                  aria-label={t('common.addOne')}
                 >
                   +
                 </button>
@@ -115,7 +115,7 @@ export const MenuItemDetailModal = ({
               <button
                 className="item-detail-modal-close-footer"
                 onClick={onClose}
-                aria-label="Close"
+                aria-label={t('common.close')}
               >
                 ×
               </button>

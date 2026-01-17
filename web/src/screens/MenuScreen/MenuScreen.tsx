@@ -178,7 +178,7 @@ export const MenuScreen = () => {
   return (
     <div className={`menu-screen ${isBasketModalOpen || selectedItemDetail ? 'modal-open' : ''}`}>
       <header className="menu-header">
-        <h1 className="menu-title">Menu</h1>
+        <h1 className="menu-title">{t('menu.title')}</h1>
         <LanguageDropdown
           currentLang={currentLang}
           onLanguageChange={handleLanguageChange}

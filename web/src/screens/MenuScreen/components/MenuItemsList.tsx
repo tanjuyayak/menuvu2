@@ -1,5 +1,5 @@
 import { MenuItem } from '../../../types/menu';
-import { getCurrentLanguage } from '../../../i18n';
+import { getCurrentLanguage, t } from '../../../i18n';
 import { MenuItemCard } from './MenuItemCard';
 import './MenuItemsList.css';
 
@@ -25,7 +25,7 @@ export const MenuItemsList = ({
   if (items.length === 0) {
     return (
       <div className="menu-items-empty">
-        <p>No items available in this category</p>
+        <p>{t('menu.noItems')}</p>
       </div>
     );
   }

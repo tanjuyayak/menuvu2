@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import './CartSummary.css';
 
 type CartSummaryProps = {
@@ -26,10 +27,10 @@ export const CartSummary = ({
         </svg>
       </div>
       <div className="cart-items-text">
-        {totalItems} {totalItems === 1 ? 'item' : 'items'} added
+        {totalItems} {totalItems === 1 ? t('common.item') : t('common.items')} {t('common.added')}
       </div>
       <button className="view-basket-button" onClick={onViewBasket}>
-        View Basket
+        {t('common.viewBasket')}
       </button>
     </div>
   );

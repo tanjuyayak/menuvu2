@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { getCurrentLanguage } from '../../../i18n';
+import { getCurrentLanguage, t } from '../../../i18n';
 import { MenuItem } from '../../../types/menu';
 import './BasketModal.css';
 
@@ -60,11 +60,11 @@ export const BasketModal = ({
     <div className="basket-modal-overlay" onClick={handleClose}>
       <div className="basket-modal" onClick={(e) => e.stopPropagation()}>
         <div className="basket-modal-header">
-          <h2 className="basket-modal-title">Basket</h2>
+          <h2 className="basket-modal-title">{t('basket.title')}</h2>
           <button
             className="basket-modal-close"
             onClick={handleClose}
-            aria-label="Close basket"
+            aria-label={t('common.closeBasket')}
           >
             ×
           </button>
@@ -73,7 +73,7 @@ export const BasketModal = ({
         {cart.length === 0 ? (
           <div className="basket-modal-content">
             <div className="basket-empty">
-              <p>Your basket is empty</p>
+              <p>{t('basket.empty')}</p>
             </div>
           </div>
         ) : (
@@ -99,7 +99,7 @@ export const BasketModal = ({
                           <button
                             className="basket-quantity-button remove"
                             onClick={() => onRemoveItem(cartItem.itemKey)}
-                            aria-label="Remove one"
+                            aria-label={t('common.removeOne')}
                           >
                             −
                           </button>
@@ -107,7 +107,7 @@ export const BasketModal = ({
                           <button
                             className="basket-quantity-button add"
                             onClick={() => onAddItem(cartItem.itemKey)}
-                            aria-label="Add one"
+                            aria-label={t('common.addOne')}
                           >
                             +
                           </button>
@@ -123,14 +123,14 @@ export const BasketModal = ({
               <textarea
                 ref={noteTextareaRef}
                 className="basket-note-input"
-                placeholder="Add a note (optional)"
+                placeholder={t('basket.noteOptional')}
                 rows={2}
               />
             </div>
 
             <div className="basket-total-section">
               <div className="basket-total-row">
-                <span className="basket-total-label">Total</span>
+                <span className="basket-total-label">{t('common.total')}</span>
                 <span className="basket-total-amount">{formatPrice(totalPrice)}€</span>
               </div>
             </div>
@@ -143,12 +143,12 @@ export const BasketModal = ({
               className="confirm-order-button"
               onClick={onConfirmOrder}
             >
-              Confirm Order
+              {t('common.confirmOrder')}
             </button>
             <button
               className="basket-modal-close-footer"
               onClick={handleClose}
-              aria-label="Close basket"
+              aria-label={t('common.closeBasket')}
             >
               ×
             </button>

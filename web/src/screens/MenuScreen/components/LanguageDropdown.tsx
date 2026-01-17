@@ -1,4 +1,4 @@
-import { getAvailableLanguages, getCurrentLanguage } from '../../../i18n';
+import { getAvailableLanguages, getCurrentLanguage, t } from '../../../i18n';
 import './LanguageDropdown.css';
 
 type LanguageDropdownProps = {
@@ -23,7 +23,7 @@ export const LanguageDropdown = ({
             key={lang.id}
             className={`language-button ${isSelected ? 'selected' : ''}`}
             onClick={() => onLanguageChange(lang.id)}
-            aria-label={`Select ${lang.name}`}
+            aria-label={`${t('common.selectLanguage')} ${lang.name}`}
             aria-pressed={isSelected}
           >
             {langCode}
