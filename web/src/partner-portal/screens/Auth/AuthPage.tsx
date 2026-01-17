@@ -7,6 +7,7 @@ import { OtpScreen } from './OtpScreen';
 import { authService } from '../../../services/authService';
 import { ApiError } from '../../../services/apiErrors';
 import { authStorage } from '../../../utils/authStorage';
+import { config } from '../../../config';
 import { t } from '../../../i18n';
 import './AuthScreens.css';
 
@@ -63,6 +64,11 @@ export function AuthPage() {
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
+      if (!config.googleClientId) {
+        setError('Google Sign-In is not configured. Please add a Google Client ID.');
+        return;
+      }
+
       setError('');
       setIsLoading(true);
 
@@ -116,6 +122,10 @@ export function AuthPage() {
   });
 
   const handleContinueWithGoogle = () => {
+    if (!config.googleClientId) {
+      setError('Google Sign-In is not configured. Please add a Google Client ID.');
+      return;
+    }
     googleLogin();
   };
 
