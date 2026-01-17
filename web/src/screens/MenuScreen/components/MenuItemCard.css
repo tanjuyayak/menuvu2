@@ -95,24 +95,23 @@
   position: absolute;
   bottom: 12px;
   left: 12px;
-  right: 48px;
+  right: auto;
   width: auto;
+  max-width: 50%;
 }
 
 .menu-item-badges {
   display: flex;
   gap: 6px;
   align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow: visible;
 }
 
-.menu-item-badges::-webkit-scrollbar {
-  display: none;
+.more-badges {
+  color: #999;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .indicator-badge {
@@ -304,8 +303,9 @@
 
   .menu-item-footer {
     left: 14px;
-    right: 56px;
+    right: auto;
     bottom: 14px;
+    max-width: 50%;
   }
 
   .menu-item-actions {

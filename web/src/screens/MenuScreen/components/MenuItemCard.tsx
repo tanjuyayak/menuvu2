@@ -49,16 +49,31 @@ export const MenuItemCard = ({
 
         <div className="menu-item-footer">
           <div className="menu-item-badges">
-            {item.indicators.map((indicator, idx) => (
-              <span key={idx} className="indicator-badge">
-                {indicator}
-              </span>
-            ))}
-            {item.allergens.map((allergen, idx) => (
-              <span key={idx} className="allergen-badge">
-                {allergen}
-              </span>
-            ))}
+            {(() => {
+              const allBadges = [
+                ...item.indicators.map((indicator, idx) => ({ type: 'indicator', text: indicator, idx })),
+                ...item.allergens.map((allergen, idx) => ({ type: 'allergen', text: allergen, idx }))
+              ];
+              const visibleBadges = allBadges.slice(0, 3);
+              const hasMore = allBadges.length > 3;
+
+              return (
+                <>
+                  {visibleBadges.map((badge, idx) => (
+                    badge.type === 'indicator' ? (
+                      <span key={`indicator-${idx}`} className="indicator-badge">
+                        {badge.text}
+                      </span>
+                    ) : (
+                      <span key={`allergen-${idx}`} className="allergen-badge">
+                        {badge.text}
+                      </span>
+                    )
+                  ))}
+                  {hasMore && <span className="more-badges">...</span>}
+                </>
+              );
+            })()}
           </div>
         </div>
       </div>
