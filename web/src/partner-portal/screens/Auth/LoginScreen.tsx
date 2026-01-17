@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { t } from '../../../i18n';
 import { AuthFooter } from './components/AuthFooter';
 import './AuthScreens.css';
@@ -23,9 +22,6 @@ export function LoginScreen({ onContinueWithEmail, onContinueWithGoogle, isLoadi
   return (
     <>
       <div className="auth-screen">
-        <Link to="/" className="auth-back-link">
-          ← {t('common.backToWebsite')}
-        </Link>
         <h1 className="auth-title">{t('auth.title')}</h1>
         <p className="auth-subtitle">{t('auth.subtitle')}</p>
         
