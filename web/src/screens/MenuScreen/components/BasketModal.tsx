@@ -145,6 +145,13 @@ export const BasketModal = ({
             >
               Confirm Order
             </button>
+            <button
+              className="basket-modal-close-footer"
+              onClick={handleClose}
+              aria-label="Close basket"
+            >
+              ×
+            </button>
           </div>
         )}
       </div>
