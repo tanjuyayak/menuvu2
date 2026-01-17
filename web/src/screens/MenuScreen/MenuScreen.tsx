@@ -36,6 +36,7 @@ export const MenuScreen = () => {
   const [isBasketModalOpen, setIsBasketModalOpen] = useState<boolean>(false);
   const [selectedItemDetail, setSelectedItemDetail] = useState<SelectedItemDetail>(null);
   const [contentKey, setContentKey] = useState<number>(0);
+  const [orderNotes, setOrderNotes] = useState<string>('');
 
   const selectedCategory = useMemo(() => {
     return menu.categories.find(cat => cat.id === selectedCategoryId);
@@ -106,9 +107,27 @@ export const MenuScreen = () => {
     return (cents / 100).toFixed(2);
   };
 
+  const generateOrderJson = (): {
+    notes: string;
+    items: Array<{ id: string; price: number; quantity: number }>;
+    total: number;
+  } => {
+    const items = cart.map(cartItem => ({
+      id: cartItem.item.id,
+      price: cartItem.item.price,
+      quantity: cartItem.quantity,
+    }));
+
+    return {
+      notes: orderNotes.trim(),
+      items,
+      total: totalPrice,
+    };
+  };
+
   const handleConfirmOrder = () => {
-    // TODO: Implement order confirmation
-    console.log('Order confirmed:', cart);
+    const orderJson = generateOrderJson();
+    console.log(JSON.stringify(orderJson, null, 2));
     setIsBasketModalOpen(false);
     // You can add order submission logic here
   };
@@ -224,6 +243,8 @@ export const MenuScreen = () => {
           formatPrice={formatPrice}
           onAddItem={handleAddItemInBasket}
           onRemoveItem={handleRemoveItemInBasket}
+          notes={orderNotes}
+          onNotesChange={setOrderNotes}
         />
       )}
 

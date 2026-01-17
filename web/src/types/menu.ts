@@ -16,6 +16,7 @@ export type Category = {
 };
 
 export type MenuItem = {
+  id: string;
   name: Record<string, string>;
   description: Record<string, string>;
   price: number;

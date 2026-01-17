@@ -17,6 +17,8 @@ type BasketModalProps = {
   formatPrice: (cents: number) => string;
   onAddItem: (itemKey: string) => void;
   onRemoveItem: (itemKey: string) => void;
+  notes: string;
+  onNotesChange: (notes: string) => void;
 };
 
 export const BasketModal = ({
@@ -26,6 +28,8 @@ export const BasketModal = ({
   formatPrice,
   onAddItem,
   onRemoveItem,
+  notes,
+  onNotesChange,
 }: BasketModalProps) => {
   const currentLang = getCurrentLanguage();
   const noteTextareaRef = useRef<HTMLTextAreaElement>(null);
@@ -125,6 +129,8 @@ export const BasketModal = ({
                 className="basket-note-input"
                 placeholder={t('basket.noteOptional')}
                 rows={2}
+                value={notes}
+                onChange={(e) => onNotesChange(e.target.value)}
               />
             </div>
 
